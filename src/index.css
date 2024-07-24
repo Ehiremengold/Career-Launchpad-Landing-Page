@@ -1,0 +1,25 @@
+:root {
+  --primary-color: #002255;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  /* max-width: 1400px;
+  margin-inline: auto;
+   max-width: 100%;  */
+}
+a{
+  text-decoration: none;
+  color: inherit;
+}
+
+main{
+  height: 5000px;
+  /* padding-top:70px;/ */
+  /* z-index: 100; */
+}

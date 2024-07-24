@@ -1,0 +1,101 @@
+header {
+  background-color: var(--primary-color);
+  color: white;
+  position: static;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 70px;
+  box-shadow: 0 5px 5px rgba(96, 96, 96, 0.3);
+  padding: 10px 0;
+}
+
+.for-enterprise-section,
+.exec-talent-section,
+.how-we-work-section {
+  background-image: url("../../../public/assets/bg/navbg.png");
+  background-size: 50%;
+  background-repeat: no-repeat;
+  background-position-x: left;
+  background-position-y: bottom;
+  position: absolute;
+  left: 0;
+  right: 0;
+  /* height: 700px; */
+  padding: 100px;
+  background-color: var(--primary-color);
+  z-index: 1;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.4s ease-in-out, visibility 0.4s ease-in-out;
+}
+
+.how-we-work-section.visible,
+.for-enterprise-section.visible,
+.exec-talent-section.visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+.for-enterprise-section .content,
+.exec-talent-section .content,
+.how-we-work-section .content {
+  width: 80%;
+  margin-inline: auto;
+  display: grid;
+  align-items: center;
+  grid-template-columns: repeat(3, 1fr);
+}
+.for-enterprise-section .content > *,
+.exec-talent-section .content > *,
+.how-we-work-section .content > * {
+  margin-right: 80px;
+}
+.how-we-work-section .content .right-section {
+  align-self: flex-start;
+}
+.left-section h3 {
+  font-size: clamp(0.6rem, 1vw, 1.25rem);
+  margin-bottom: 20px;
+}
+.left-section p {
+  color: #b0bbcb;
+  font-size: 16px;
+  line-height: 25px;
+  margin-bottom: 30px;
+}
+
+.content .right-section .page-description,
+.content .middle-section .page-description {
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  padding: 20px;
+  background-color: transparent;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+.content .right-section .page-description:hover,
+.content .middle-section .page-description:hover {
+  background-color: #97aed3 !important; /* Background color on hover */
+  transform: scale(1.05) !important; /* Scale effect on hover */
+}
+
+.content .right-section .page-description img,
+.content .middle-section .page-description img {
+  width: 10px;
+}
+.exec-talent-section .content .left-section a {
+  text-decoration: none;
+  cursor: pointer;
+}
+.exec-talent-section .content .left-section .successStories {
+  color: #68c7fc;
+  display: inline-block;
+}
+.exec-talent-section .content .left-section a .successStories:hover {
+  text-decoration: underline;
+}
