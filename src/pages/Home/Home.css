@@ -177,13 +177,13 @@
   position: relative;
   background: url("../../../public/assets/bg/explore.png") no-repeat center
     center;
-  background-size: contain;
-  /* padding: 2rem 0; */
+  background-size: cover;
+  padding: 2rem 0;
 }
 
 @media (min-width: 1024px) {
   .executive-sponsorshipPrograms-section {
-    height: 20%;
+    height: 10%;
   }
 }
 
