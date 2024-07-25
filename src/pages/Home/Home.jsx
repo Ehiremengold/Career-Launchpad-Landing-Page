@@ -31,6 +31,19 @@ const defaultOptions = (animationData) => ({
 const Home = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
+  const countries = [
+    "Country 1",
+    "Country 2",
+    "Country 3",
+    "Country 4",
+    "Country 5",
+    "Country 6",
+    "Country 7",
+    "Country 8",
+    "Country 9",
+    "Country 10",
+  ];
+
   const prevTestimonial = () => {
     if (currentIndex > 0) {
       setCurrentIndex(currentIndex - 1);
@@ -333,9 +346,31 @@ const Home = () => {
           </div>
         </div>
       </section>
-      {/* <section className="cta__section">
-
-      </section> */}
+      <section className="cta__section">
+        <div className="cta__section_content">
+          <div className="text-section">
+            <h2>Speak with our career consultant</h2>
+            <p>Secure your spot now! Seats are filling up fast.</p>
+          </div>
+          <div className="form-section">
+            <form action="">
+              <div className="name">
+                <input type="text" placeholder="Firstname" />
+                <input type="text" placeholder="Lastname" />
+              </div>
+              <input type="text" placeholder="Email" />
+              <select name="Country" id="" placeholder="Choose a Country">
+                {countries.map((country, index) => (
+                  <option key={index} value={`${country}`}>
+                    {country}
+                  </option>
+                ))}
+              </select>
+              <input type="text" placeholder="Phone" />
+            </form>
+          </div>
+        </div>
+      </section>
     </>
   );
 };

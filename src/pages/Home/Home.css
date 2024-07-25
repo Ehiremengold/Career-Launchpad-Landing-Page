@@ -34,19 +34,26 @@
 }
 @media (max-width: 1024px) {
   .hero__content {
-    margin: 70px auto;
+    margin: 100px auto;
   }
 }
+@media (min-width: 1024px) {
+  .hero__text h2 {
+    font-size: 4vh;
+  }
+}
+
 .hero__text {
   width: 90%;
   max-width: 750px;
 }
 
-.hero__text h2 {
-  font-size: 3vh;
-}
+
 
 @media (max-width: 1024px) {
+  .hero__content {
+    width: 90%;
+  }
   .hero__text h3 {
     font-size: 1.5vh;
     margin-bottom: 10px;
@@ -118,8 +125,8 @@
     padding: 0.5rem;
   }
 }
-@media (max-width:768) {
-  .hero__text input{
+@media (max-width: 768) {
+  .hero__text input {
     width: 100%;
   }
 }
@@ -150,8 +157,8 @@
   }
 
   .sponsors img {
-    height: 40%;
-    width: 40%;
+    height: 25%;
+    width: 25%;
   }
 }
 @keyframes scroll {
@@ -575,10 +582,62 @@ right: 4rem; */
   width: 70%;
 }
 
-.cta__section{
+.cta__section {
+  padding: 7rem 0;
   position: relative;
-  /* background: url("../../../public/assets/svg/ctaAngled.svg") no-repeat center center; */
+  background: url("../../../public/assets/svg/ctaAngled.svg") no-repeat center
+    center;
   background-size: cover;
-  /* width: 100%; */
-  /* padding: 30em; */
+}
+.cta__section_content {
+  padding: 5rem 0;
+  width: 60%;
+  margin-inline: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cta__section_content .text-section {
+  color: white;
+}
+
+.cta__section_content .text-section h2 {
+  font-size: 2rem;
+}
+
+@media (max-width: 768px) {
+  .cta__section_content {
+    width: 90%;
+    margin-inline:auto;
+    flex-direction: column;
+  }
+  .cta__section_content .form-section{
+    width: 100%;
+    margin-top: 3rem;
+  }
+}
+
+.form-section {
+  background-color: white;
+  border-radius: 5px;
+  padding: 1.5rem;
+  width: 40%;
+  max-width: 750px;
+}
+
+.form-section form input,
+.form-section form select {
+  padding: 1rem;
+  font-family: "Poppins";
+  display: block;
+  width: 100%;
+  margin-bottom: 1.25rem;
+}
+.form-section form input:focus{
+  outline: none;
+}
+.form-section form .name {
+  display: flex;
+  gap: 1rem;
 }

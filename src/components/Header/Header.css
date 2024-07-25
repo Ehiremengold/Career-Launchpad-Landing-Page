@@ -1,13 +1,17 @@
 header {
   background-color: var(--primary-color);
   color: white;
-  position: static;
+  position: fixed;
+  z-index: 10000;
   left: 0;
   right: 0;
   width: 100%;
   height: 70px;
   box-shadow: 0 5px 5px rgba(96, 96, 96, 0.3);
   padding: 10px 0;
+  max-width: 100%;
+  width: 2000px;
+  margin-inline: auto;
 }
 
 .for-enterprise-section,

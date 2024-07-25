@@ -1,7 +1,6 @@
 import "./NavBar.css";
 import logo from "../../../public/assets/logo/logo.png";
 import arrowIcon from "../../../public/assets/svg/arrow.svg";
-import { useState } from "react";
 
 const NavBar = ({ setVisibleSection }) => {
   const handleMouseEnter = (section) => {
@@ -16,7 +15,7 @@ const NavBar = ({ setVisibleSection }) => {
       <div className="logo">
         <img src={logo} alt="Pairview training" />
       </div>
-      <div className="nav-items">
+      <div className="nav-items ">
         <ul>
           <li
             className="more executive-talent"
