@@ -298,7 +298,9 @@ const Home = () => {
           <h2>What Our Alumni are Saying About Job Offer Premium Guarantee</h2>
           <div className="testimonial-container">
             <button
-              className={`testimonial-nav left ${currentIndex === 0 ? 'disabled' : ''}`}
+              className={`testimonial-nav left ${
+                currentIndex === 0 ? "disabled" : ""
+              }`}
               onClick={prevTestimonial}
               disabled={currentIndex === 0}
             >
@@ -320,7 +322,9 @@ const Home = () => {
               </div>
             </div>
             <button
-              className={`testimonial-nav right ${currentIndex === testimonials.length - 1 ? 'disabled' : ''}`}
+              className={`testimonial-nav right ${
+                currentIndex === testimonials.length - 1 ? "disabled" : ""
+              }`}
               onClick={nextTestimonial}
               disabled={currentIndex === testimonials.length - 1}
             >
@@ -329,6 +333,9 @@ const Home = () => {
           </div>
         </div>
       </section>
+      {/* <section className="cta__section">
+
+      </section> */}
     </>
   );
 };

@@ -6,7 +6,7 @@ const Base = ({ children }) => {
     <>
       <Header />
       <main>{children}</main>
-      {/* <Footer /> */}
+      <Footer />
     </>
   );
 };

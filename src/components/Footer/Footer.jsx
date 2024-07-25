@@ -107,64 +107,53 @@ const Footer = () => {
             <p>Connect with us</p>
             <img src={arrowRight} alt="" />
           </div>
-          <div className="contact-continent">
-            <p>Europe</p>
-            <div className="social-media-icons">
-              <img src={facebookIcon} alt="" />
-              <img src={twitterIcon} alt="" />
-              <img src={instagramIcon} alt="" />
-              <img src={linkedinIcon} alt="" />
+          <div className="contact-continent-row">
+            <div className="contact-continent">
+              <p>Europe</p>
+              <div className="social-media-icons">
+                <img src={facebookIcon} alt="" />
+                <img src={twitterIcon} alt="" />
+                <img src={instagramIcon} alt="" />
+                <img src={linkedinIcon} alt="" />
+              </div>
             </div>
-          </div>
-          <div className="contact-continent">
-            <p>Africa</p>
-            <div className="social-media-icons">
-              <img src={facebookIcon} alt="" />
-              <img src={twitterIcon} alt="" />
-              <img src={instagramIcon} alt="" />
-              <img src={linkedinIcon} alt="" />
+            <div className="contact-continent">
+              <p>Africa</p>
+              <div className="social-media-icons">
+                <img src={facebookIcon} alt="" />
+                <img src={twitterIcon} alt="" />
+                <img src={instagramIcon} alt="" />
+                <img src={linkedinIcon} alt="" />
+              </div>
             </div>
           </div>
         </div>
       </div>
 
       <div className="lower-footer">
-        <div className="footer-footer-content">
-          <div>
-            <a href="">
-              <p>Terms of Use</p>
-            </a>
-            <span>&#124;</span>
-          </div>
-          <div>
-            <a href="">
-              <p>Privacy Policy</p>
-            </a>
-            <span>&#124;</span>
-          </div>
-          <div>
-            <a href="">
-              <p>Cookies</p>
-            </a>
-            <span>&#124;</span>
-          </div>
-          <div>
-            <a href="">
-              <p>Web Accessibility</p>
-            </a>
-            <span>&#124;</span>
-          </div>
-          <div>
-            <a href="">
-              <p>Legal Disclaimer</p>
-            </a>
-          </div>
-        </div>
+        <div className="d-flex">
+          <div className="footer-footer-content">
+            <p>Terms of Use</p>
 
-        <p>
-          All Right Reserved &copy; pairviewtraining.com{" "}
-          {new Date().getFullYear()}
-        </p>
+            {/* <span>&#124;</span> */}
+
+            <p>Privacy Policy</p>
+            {/* <span>&#124;</span> */}
+
+            <p>Cookies</p>
+            {/* <span>&#124;</span> */}
+
+            <p>Web Accessibility</p>
+            {/* <span>&#124;</span> */}
+
+            <p>Legal Disclaimer</p>
+          </div>
+
+          <p className="year-copy">
+            All Right Reserved &copy; pairviewtraining.com{" "}
+            {new Date().getFullYear()}
+          </p>
+        </div>
       </div>
     </footer>
   );
