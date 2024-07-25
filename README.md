@@ -20,3 +20,11 @@ This project is a landing page designed to promote the Executive Talent Sponsors
 - **CSS**: For styling components and layout.
 - **HTML**: Markup structure of the page.
 - **Lottie**: For animations, using JSON files to render interactive animations.
+
+## Screenshots
+
+![Laptop View](./screenshots/laptop.png)
+
+![Tab View](./screenshots/tab.png)
+
+![Phone View](./screenshots/phone.png)
