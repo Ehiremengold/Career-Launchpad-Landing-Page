@@ -1,10 +1,15 @@
 .hero-container {
   position: relative;
   width: 100%;
-  height: 85vh;
+  height: 80vh;
   overflow: hidden;
 }
 
+@media (min-width: 1440px) {
+  .hero-container {
+    height: 95vh;
+  }
+}
 .hero-video {
   position: absolute;
   top: 50%;
@@ -67,7 +72,7 @@
 
 .hero__text input {
   font-family: "Poppins", sans-serif;
-  padding: 1.40em;
+  padding: 1.4em;
   width: 75%;
   border: none;
   border-top-left-radius: 4px;
@@ -604,7 +609,7 @@ right: 4rem; */
   .cta__section_content {
     width: 95%;
   }
-  .text-section{
+  .text-section {
     width: 50%;
   }
 }
@@ -626,7 +631,7 @@ right: 4rem; */
     width: 100%;
     margin-top: 3rem;
   }
-  .text-section{
+  .text-section {
     width: 80%;
   }
 }

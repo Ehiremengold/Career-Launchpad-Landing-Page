@@ -135,16 +135,16 @@ const Footer = () => {
           <div className="footer-footer-content">
             <p>Terms of Use</p>
 
-            {/* <span>&#124;</span> */}
+            <span>&#124;</span>
 
             <p>Privacy Policy</p>
-            {/* <span>&#124;</span> */}
+            <span>&#124;</span>
 
             <p>Cookies</p>
-            {/* <span>&#124;</span> */}
+            <span>&#124;</span>
 
             <p>Web Accessibility</p>
-            {/* <span>&#124;</span> */}
+            <span>&#124;</span>
 
             <p>Legal Disclaimer</p>
           </div>

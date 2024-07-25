@@ -119,7 +119,10 @@ footer {
 } */
 @media (max-width: 768px) {
   .lower-footer .footer-footer-content {
-    width: 85%;
+    width: 90%;
+  }
+  .lower-footer .footer-footer-content > *{
+    margin-right: .5rem;
   }
   .footer-content {
     grid-template-columns: 1fr;
