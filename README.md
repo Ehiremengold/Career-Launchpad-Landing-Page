@@ -1,8 +1,22 @@
-# React + Vite
+# Executive Talent Sponsorship Program Landing Page
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Overview
 
-Currently, two official plugins are available:
+This project is a landing page designed to promote the Executive Talent Sponsorship Program. It features an interactive and engaging user interface with a hero section, testimonial slider, program descriptions, and more. The page is built using React and CSS, utilizing various assets and animations to enhance the user experience.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
+
+- **Hero Section**: Includes a background video and an input field for user queries, with options for different tech fields.
+- **Interactive NavBar**: Includes dropdowns and hover effects for a seamless navigation experience.
+- **Company Logos**: Scrollable section displaying partner companies.
+- **Program Cards**: Highlighting different sponsorship programs such as AI Engineer, Cybersecurity Engineer, Data Engineer, and Expert Data Scientist.
+- **Why Join Section**: Detailed benefits of joining the programs, supported by Lottie animations.
+- **Testimonial Slider**: A carousel showcasing alumni testimonials with navigation arrows.
+- **Metrics Section**: Showcasing key metrics like the number of professionals developed, job placement rate, and service excellence score.
+
+## Technologies Used
+
+- **React**: A JavaScript library for building user interfaces.
+- **CSS**: For styling components and layout.
+- **HTML**: Markup structure of the page.
+- **Lottie**: For animations, using JSON files to render interactive animations.
