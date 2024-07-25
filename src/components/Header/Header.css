@@ -34,6 +34,13 @@ header {
   transition: opacity 0.4s ease-in-out, visibility 0.4s ease-in-out;
 }
 
+@media (max-width: 1024px) {
+  .for-enterprise-section,
+  .exec-talent-section,
+  .how-we-work-section {
+    padding: 40px;
+  }
+}
 .how-we-work-section.visible,
 .for-enterprise-section.visible,
 .exec-talent-section.visible {
@@ -44,7 +51,7 @@ header {
 .for-enterprise-section .content,
 .exec-talent-section .content,
 .how-we-work-section .content {
-  width: 80%;
+  width: 95%;
   margin-inline: auto;
   display: grid;
   align-items: center;

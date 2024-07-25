@@ -48,8 +48,6 @@
   max-width: 750px;
 }
 
-
-
 @media (max-width: 1024px) {
   .hero__content {
     width: 90%;
@@ -69,10 +67,9 @@
 
 .hero__text input {
   font-family: "Poppins", sans-serif;
-  padding: 1.5em;
-  width: 70%;
+  padding: 1.40em;
+  width: 75%;
   border: none;
-
   border-top-left-radius: 4px;
   border-bottom-left-radius: 4px;
 }
@@ -82,7 +79,7 @@
 .hero__text button {
   background-color: #fff;
   border: none;
-  padding: 1.4em;
+  padding: 1.37em;
   border-top-right-radius: 4px;
   border-bottom-right-radius: 4px;
   cursor: pointer;
@@ -157,8 +154,8 @@
   }
 
   .sponsors img {
-    height: 25%;
-    width: 25%;
+    height: 35%;
+    width: 35%;
   }
 }
 @keyframes scroll {
@@ -417,13 +414,13 @@ right: 4rem; */
 .difference-overlay {
   background-color: white;
   position: absolute;
-  top: -80%;
+  top: -100%;
   width: 60%;
   left: 50%;
   transform: translate(-50%, 50%);
   border-radius: 5px;
   box-shadow: 2px 3px 5px rgba(96, 96, 96, 0.4);
-  padding: 2.5rem;
+  padding: 1.5rem;
 }
 @media (max-width: 768px) {
   .difference-overlay {
@@ -440,6 +437,12 @@ right: 4rem; */
   display: flex;
   align-items: center;
   margin-top: 2em;
+  gap: 1rem;
+}
+@media (max-width: 1024px) {
+  .difference-data__number_description {
+    font-size: 0.8rem;
+  }
 }
 
 .difference-section__content h2 {
@@ -597,7 +600,14 @@ right: 4rem; */
   justify-content: space-between;
   align-items: center;
 }
-
+@media (max-width: 1024px) {
+  .cta__section_content {
+    width: 95%;
+  }
+  .text-section{
+    width: 50%;
+  }
+}
 .cta__section_content .text-section {
   color: white;
 }
@@ -609,12 +619,15 @@ right: 4rem; */
 @media (max-width: 768px) {
   .cta__section_content {
     width: 90%;
-    margin-inline:auto;
+    margin-inline: auto;
     flex-direction: column;
   }
-  .cta__section_content .form-section{
+  .cta__section_content .form-section {
     width: 100%;
     margin-top: 3rem;
+  }
+  .text-section{
+    width: 80%;
   }
 }
 
@@ -622,7 +635,7 @@ right: 4rem; */
   background-color: white;
   border-radius: 5px;
   padding: 3rem 2rem;
-  width: 40%;
+  width: 50%;
   max-width: 750px;
 }
 
@@ -634,7 +647,7 @@ right: 4rem; */
   width: 100%;
   margin-bottom: 1.25rem;
 }
-.form-section form input:focus{
+.form-section form input:focus {
   outline: none;
 }
 .form-section form .name {
@@ -642,7 +655,7 @@ right: 4rem; */
   gap: 1rem;
 }
 
-.cta-btn{
+.cta-btn {
   background-color: var(--primary-color);
   color: white;
   padding: 1.25em;
