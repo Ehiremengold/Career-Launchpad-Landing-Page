@@ -1,7 +1,7 @@
 .hero-container {
   position: relative;
   width: 100%;
-  height: 75vh;
+  height: 85vh;
   overflow: hidden;
 }
 
@@ -18,7 +18,7 @@
 
 .overlay {
   position: absolute;
-  background: linear-gradient(to right, rgba(0, 34, 85, 0.9), transparent);
+  background: linear-gradient(to right, rgba(0, 34, 85, 1), transparent);
   left: 0;
   right: 0;
   top: 0;
@@ -34,7 +34,7 @@
 }
 @media (max-width: 1024px) {
   .hero__content {
-    margin: 100px auto;
+    margin: 140px auto;
   }
 }
 @media (min-width: 1024px) {
@@ -621,7 +621,7 @@ right: 4rem; */
 .form-section {
   background-color: white;
   border-radius: 5px;
-  padding: 1.5rem;
+  padding: 3rem 2rem;
   width: 40%;
   max-width: 750px;
 }
@@ -640,4 +640,16 @@ right: 4rem; */
 .form-section form .name {
   display: flex;
   gap: 1rem;
+}
+
+.cta-btn{
+  background-color: var(--primary-color);
+  color: white;
+  padding: 1.25em;
+  border: none;
+  border-radius: 4px;
+  font-weight: 600;
+  font-family: "Poppins";
+  margin-inline: auto;
+  width: 100%;
 }

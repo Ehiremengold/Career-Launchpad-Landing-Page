@@ -1,8 +1,17 @@
 import "./NavBar.css";
 import logo from "../../../public/assets/logo/logo.png";
 import arrowIcon from "../../../public/assets/svg/arrow.svg";
+import menuIcon from "../../../public/assets/svg/menu.svg";
+import menuCloseIcon from "../../../public/assets/svg/menu-close.png";
+import { useState } from "react";
 
 const NavBar = ({ setVisibleSection }) => {
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen);
+  };
+
   const handleMouseEnter = (section) => {
     setVisibleSection(section);
   };
@@ -15,7 +24,13 @@ const NavBar = ({ setVisibleSection }) => {
       <div className="logo">
         <img src={logo} alt="Pairview training" />
       </div>
-      <div className="nav-items ">
+      <div className="hamburger-icon" onClick={toggleMenu}>
+        <img src={menuIcon} alt="" />
+      </div>
+      <div className={`nav-items ${menuOpen ? "active" : ""}`}>  
+        <div className="close" onClick={toggleMenu}>
+          <img src={menuCloseIcon} alt="" />
+        </div>
         <ul>
           <li
             className="more executive-talent"

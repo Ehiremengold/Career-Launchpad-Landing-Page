@@ -367,6 +367,7 @@ const Home = () => {
                 ))}
               </select>
               <input type="text" placeholder="Phone" />
+              <button className="cta-btn">BOOK A CALL</button>
             </form>
           </div>
         </div>
