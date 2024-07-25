@@ -5,6 +5,7 @@ import menuIcon from "../../../public/assets/svg/menu.svg";
 import menuCloseIcon from "../../../public/assets/svg/menu-close.png";
 import { useState } from "react";
 
+// eslint-disable-next-line react/prop-types
 const NavBar = ({ setVisibleSection }) => {
   const [menuOpen, setMenuOpen] = useState(false);
 
