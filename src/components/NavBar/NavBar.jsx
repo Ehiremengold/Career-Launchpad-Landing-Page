@@ -22,13 +22,15 @@ const NavBar = ({ setVisibleSection }) => {
   };
   return (
     <nav>
-      <div className="logo">
-        <img src={logo} alt="Pairview training" />
-      </div>
+      <a href="/">
+        <div className="logo">
+          <img src={logo} alt="Pairview training" />
+        </div>
+      </a>
       <div className="hamburger-icon" onClick={toggleMenu}>
         <img src={menuIcon} alt="" />
       </div>
-      <div className={`nav-items ${menuOpen ? "active" : ""}`}>  
+      <div className={`nav-items ${menuOpen ? "active" : ""}`}>
         <div className="close" onClick={toggleMenu}>
           <img src={menuCloseIcon} alt="" />
         </div>
@@ -38,7 +40,7 @@ const NavBar = ({ setVisibleSection }) => {
             onMouseEnter={() => handleMouseEnter("exec-talent-section")}
             onMouseLeave={handleMouseLeave}
           >
-            <a href="">Executive Talent Sponsorship Program</a>
+            <a href="#">Executive Talent Sponsorship Program</a>
             <img src={arrowIcon} className="arrow-rotate" alt="" />
             <div className="orange-line"></div>
           </li>
@@ -51,7 +53,7 @@ const NavBar = ({ setVisibleSection }) => {
             onMouseEnter={() => handleMouseEnter("how-we-work-section")}
             onMouseLeave={handleMouseLeave}
           >
-            <a href="">How We Work</a>
+            <a href="#">How We Work</a>
             <img src={arrowIcon} className="arrow-rotate" alt="" />
             <div className="orange-line"></div>
           </li>
@@ -60,12 +62,12 @@ const NavBar = ({ setVisibleSection }) => {
             onMouseEnter={() => handleMouseEnter("for-enterprise-section")}
             onMouseLeave={handleMouseLeave}
           >
-            <a href="">For Enterprise</a>
+            <a href="#">For Enterprise</a>
             <img src={arrowIcon} className="arrow-rotate" alt="" />
             <div className="orange-line"></div>
           </li>
           <li>
-            <a href="">Events</a>
+            <a href="#">Events</a>
             <div className="orange-line"></div>
           </li>
         </ul>

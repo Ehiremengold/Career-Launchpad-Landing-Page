@@ -39,10 +39,12 @@ const Header = () => {
           </div>
 
           <div className="middle-section">
-            <div className="page-description">
-              <p>AI Engineer</p>
-              <img src={arrow} alt="" />
-            </div>
+            <a href="/executive-talent-sponsorship-program/ai-engineer">
+              <div className="page-description">
+                <p>AI Engineer</p>
+                <img src={arrow} alt="" />
+              </div>
+            </a>
             <div className="page-description">
               <p>Data Engineer</p>
               <img src={arrow} alt="" />
@@ -80,10 +82,12 @@ const Header = () => {
           </div>
 
           <div className="middle-section">
-            <div className="page-description">
-              <p>About</p>
-              <img src={arrow} alt="" />
-            </div>
+            <a href="/about">
+              <div className="page-description">
+                <p>About</p>
+                <img src={arrow} alt="" />
+              </div>
+            </a>
             <div className="page-description">
               <p>Our Career Development Approach</p>
               <img src={arrow} alt="" />

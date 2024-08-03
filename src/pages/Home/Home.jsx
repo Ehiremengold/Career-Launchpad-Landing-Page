@@ -1,9 +1,6 @@
 import "./Home.css";
 import videoFile from "../../../public/assets/hero-video/hero.mp4";
 import searchIcon from "../../../public/assets/svg/search_brown.svg";
-import * as images from "../../../public/assets/companies/imgutil.js";
-import navRightArrow from "../../../public/assets/svg/nav-right-arrow.svg";
-import navLeftArrow from "../../../public/assets/svg/nav-left-arrow.svg";
 import branchimg from "../../../public/assets/execsponsorprog/branch.png";
 import diagram from "../../../public/assets/execsponsorprog/diagram-3.png";
 import regularnews from "../../../public/assets/execsponsorprog/regularnews.png";
@@ -16,8 +13,10 @@ import consult from "../../../public/assets/lottie/consult.json";
 import layers from "../../../public/assets/lottie/layers.json";
 import whyJoinImg from "../../../public/assets/bg/whyJoin.png";
 import whyJoinGirlImg from "../../../public/assets/bg/whyJoin-girl.png";
-import { testimonials } from "./testimonialData.js";
-import { useState } from "react";
+import Alumni from "../../components/Alumni/Alumni.jsx"; 
+import * as images from "../../../public/assets/companies/imgutil.js";
+// import { useState } from "react";
+import { Helmet } from "react-helmet";
 
 const defaultOptions = (animationData) => ({
   loop: true,
@@ -29,7 +28,7 @@ const defaultOptions = (animationData) => ({
 });
 
 const Home = () => {
-  const [currentIndex, setCurrentIndex] = useState(0);
+ 
 
   const countries = [
     "Country 1",
@@ -44,19 +43,15 @@ const Home = () => {
     "Country 10",
   ];
 
-  const prevTestimonial = () => {
-    if (currentIndex > 0) {
-      setCurrentIndex(currentIndex - 1);
-    }
-  };
-
-  const nextTestimonial = () => {
-    if (currentIndex < testimonials.length - 1) {
-      setCurrentIndex(currentIndex + 1);
-    }
-  };
+  
   return (
     <>
+      <Helmet>
+        <title>
+          Build a career in fast growing fields. Only at Pairview | Pairview
+          Training
+        </title>
+      </Helmet>
       <div className="because-of-sponsor-container">
         <section className="hero-container">
           <video className="hero-video" autoPlay loop muted>
@@ -306,46 +301,7 @@ const Home = () => {
           </div>
         </div>
       </section>
-      <section className="alumni">
-        <div className="testimonial-section">
-          <h2>What Our Alumni are Saying About Job Offer Premium Guarantee</h2>
-          <div className="testimonial-container">
-            <button
-              className={`testimonial-nav left ${
-                currentIndex === 0 ? "disabled" : ""
-              }`}
-              onClick={prevTestimonial}
-              disabled={currentIndex === 0}
-            >
-              <img src={navLeftArrow} alt="Previous" />
-            </button>
-            <div className="testimonial-content">
-              <div className="testimonial-text">
-                <h3>{testimonials[currentIndex].name}</h3>
-                <p>
-                  <strong>Company: {testimonials[currentIndex].company}</strong>
-                </p>
-                <p>`{testimonials[currentIndex].feedback}`</p>
-              </div>
-              <div className="testimonial-image">
-                <img
-                  src={testimonials[currentIndex].image}
-                  alt={testimonials[currentIndex].name}
-                />
-              </div>
-            </div>
-            <button
-              className={`testimonial-nav right ${
-                currentIndex === testimonials.length - 1 ? "disabled" : ""
-              }`}
-              onClick={nextTestimonial}
-              disabled={currentIndex === testimonials.length - 1}
-            >
-              <img src={navRightArrow} alt="Next" />
-            </button>
-          </div>
-        </div>
-      </section>
+      <Alumni/>
       <section className="cta__section">
         <div className="cta__section_content">
           <div className="text-section">

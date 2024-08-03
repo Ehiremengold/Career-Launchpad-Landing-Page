@@ -150,8 +150,8 @@ const Footer = () => {
           </div>
 
           <p className="year-copy">
-            All Right Reserved &copy; pairviewtraining.com{" "}
-            {new Date().getFullYear()}
+            All Right Reserved &copy; 
+            {" "} {new Date().getFullYear()}  Pairviewtraining.com 
           </p>
         </div>
       </div>

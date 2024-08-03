@@ -1,0 +1,18 @@
+export const mediums = [
+  "How did you hear about Pairview",
+  "Email",
+  "Proshare",
+  "Total Jobs",
+  "Student Jobs",
+  "Google",
+  "Quora",
+  "Pinterest",
+  "Facebook",
+  "Instagram",
+  "Twitter",
+  "LinkedIn",
+  "Hot Nigerian Jobs",
+  "Other Websites",
+  "Through a Friend",
+  "Event",
+];

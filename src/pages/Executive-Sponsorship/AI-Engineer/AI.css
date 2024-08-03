@@ -1,0 +1,608 @@
+.ai-hero {
+  position: relative;
+  width: 100%;
+  height: 90vh;
+  padding-top: 60px;
+  background: linear-gradient(to right, transparent, rgba(0, 34, 85, 0.5)),
+    url("../../../../public/assets/bg/ai-engineer-bg.png");
+  background-size: cover;
+  background-position: right;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.ai-hero__content {
+  color: white;
+  width: 85%;
+  margin: 200px auto;
+  /* display: flex;
+  justify-content: space-between; */
+}
+
+.ai-hero__content > * {
+  margin-bottom: 10px;
+}
+
+.ai-hero__content h2 span {
+  color: #b4bdca;
+}
+
+.ai-hero__content p {
+  color: #cad0db;
+  font-size: 0.9rem;
+  width: 60%;
+}
+@media (min-width: 1024px) {
+  .ai-hero__content {
+    color: white;
+    width: 60%;
+    margin: 250px auto;
+  }
+}
+.ai-cta {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+}
+.ai-cta button {
+  font-family: "Poppins";
+  background-color: #9b2805;
+  color: white;
+  border: none;
+  padding: 0.5rem 1.5rem;
+  cursor: pointer;
+  margin-right: 1rem;
+  white-space: nowrap;
+  transition: background-color 0.4s ease-in-out;
+}
+
+.ai-cta button:hover {
+  background-color: #882305;
+}
+
+.ai-cta p {
+  text-decoration: underline;
+  color: white;
+}
+.ai__why-become-ai {
+  align-self: end;
+  justify-content: end;
+  white-space: nowrap;
+  background-color: var(--primary-color);
+  color: white;
+  padding: 0.5rem;
+  border-radius: 4px;
+}
+
+.why-become-an-ai-engineer {
+  display: flex;
+  position: absolute;
+  color: white;
+  right: 10%;
+  bottom: 10%;
+  background-color: var(--primary-color);
+  padding: 0.5rem 1rem;
+  font-size: 0.8rem;
+  border-radius: 4px;
+  align-items: center;
+  font-weight: 600;
+}
+
+@media (max-width: 425px) {
+  .ai-hero {
+    background-position: center;
+  }
+  .why-become-an-ai-engineer {
+    display: none;
+  }
+  .ai-hero__content p {
+    width: 80%;
+  }
+}
+.why-become-an-ai-engineer img {
+  width: 8%;
+}
+
+.companies-hired-our-graduates {
+  z-index: 3;
+  text-align: center;
+  background-color: #fff;
+  color: var(--primary-color);
+  border-radius: 5px;
+  width: 60%;
+  position: absolute;
+  top: 85%; /*Adjust to position correctly on the section image*/
+  bottom: 0;
+  padding: 1em;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  overflow: hidden;
+  box-shadow: 3px 5px 7px rgba(96, 96, 96, 0.3);
+}
+
+.companies-hired-our-graduates h2 {
+  font-size: 1.35rem;
+}
+.companies-hired-our-graduates img {
+  height: 15%;
+  width: 15%;
+}
+.scroll-container{
+  margin-top: 15px;
+}
+@media (max-width: 1024px) {
+  .companies-hired-our-graduates {
+    width: 80%;
+  }
+  .companies-hired-our-graduates h2{
+    font-size: 1rem;
+  }
+  .companies-hired-our-graduates img {
+    height: 20%;
+    width: 20%;
+  }
+}
+
+.companies-hired-our-graduates:hover .scroll-container {
+  animation-play-state: paused; /* Pause animation on hover */
+}
+
+.Job-Offer-Premium {
+  position: relative;
+  z-index: 0;
+  width: 100%;
+  /* height: 80vh; */
+  padding: 100px 0;
+  background: linear-gradient(to right, transparent, rgba(0, 34, 85, 0.5)),
+    url("../../../../public/assets/bg/ai-engineer-s2.png");
+  /* background-size: center; */
+  background-position: top;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  color: #fff;
+}
+
+.premium-combined {
+  margin-top: 150px;
+  width: 60%;
+  margin-inline: auto;
+}
+
+@media (max-width: 768px) {
+  .premium-combined {
+    width: 85%;
+  }
+}
+.premium-description {
+  text-align: center;
+}
+.premium-description > * {
+  margin-bottom: 15px;
+}
+.img-description {
+  font-size: 1.2rem;
+  text-align: center;
+}
+.description-description {
+  font-size: 0.8rem;
+}
+.premium-combined .col-grids {
+  margin-top: 50px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+}
+
+.col-grids .col-grid {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.col-grids .col-grid > * {
+  margin-bottom: 0.4rem;
+}
+.col-grids .col-grid img {
+  width: 15%;
+}
+@media (min-width: 1024px) {
+  .premium-combined {
+    width: 80%;
+  }
+}
+@media (max-width: 768px) {
+  .premium-combined .col-grids {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 425px) {
+  .premium-combined .col-grids {
+    grid-template-columns: 1fr;
+  }
+}
+.free-consult {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+}
+/* .pay-fee, */
+.free-consult-btn {
+  font-family: "Poppins";
+  white-space: nowrap;
+  background-color: #1358db;
+  color: white;
+  border-radius: 4px;
+  padding: 0.8rem 1rem;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+
+.free-consult-btn:active {
+  transform: scale(0.9);
+}
+
+.angled-bg {
+  background-image: url("../../../../public/assets/svg/angled.svg");
+  position: relative;
+  z-index: 0;
+  width: 100%;
+  height: 80vh;
+  padding: 80px 0;
+  background-size: center;
+  background-position: top;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  color: #fff;
+}
+.class-schedule {
+  width: 45%;
+  margin: 140px auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+}
+.class-schedule div {
+  margin-right: 10px;
+  /* white-space: nowrap; */
+}
+@media (max-width: 768px) {
+  .class-schedule {
+    width: 90%;
+  }
+}
+.class-schedule .line {
+  height: 100px;
+  /* width: ; */
+  color: white;
+  background-color: white;
+  border: 1px solid white;
+}
+@media (max-width: 375px) {
+  .class-schedule {
+    flex-direction: column;
+  }
+  .class-schedule .line {
+    width: 100px;
+    height: 0;
+    margin: 30px 0;
+  }
+}
+
+.learning-outcome .learning-outcome__details {
+  width: 50%;
+  /* border: 1px solid red; */
+  margin-inline: auto;
+  margin-top: 50px;
+}
+
+.learning-outcome .learning-outcome__details h3 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: var(--primary-color);
+}
+
+@media (max-width: 768px) {
+  .learning-outcome .learning-outcome__details {
+    width: 75%;
+  }
+}
+
+.learning-outcome__details .learning-cols {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* vertical-align: top;/ */
+}
+@media (max-width: 768px) {
+  .learning-outcome__details .learning-cols {
+    flex-direction: column;
+  }
+}
+.learning-col__detail {
+  display: flex;
+  margin-bottom: 35px;
+}
+.learning-outcome-icon {
+  width: 15%;
+  margin-right: 20px;
+}
+
+.job-offer-premium-payment {
+  margin-top: 80px;
+}
+.premium-payment {
+  width: 50%;
+  margin-inline: auto;
+  text-align: center;
+  /* border: 1px solid red; */
+}
+
+.premium-payment h3 {
+  color: var(--primary-color);
+  margin-bottom: 20px;
+}
+.talk-to-consultant,
+.pay-fee {
+  white-space: nowrap;
+  background-color: #1358db;
+  color: white;
+  border-radius: 4px;
+  margin-inline: auto;
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  margin: 40px 0;
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: transform 0.7s ease-in-out;
+}
+@media (max-width: 1024px) {
+  .premium-payment {
+    width: 80%;
+  }
+}
+
+@media (max-width: 425px) {
+  .premium-payment {
+    width: 90%;
+  }
+}
+.talk-to-consultant:active,
+.pay-fee:active {
+  transform: scale(0.8);
+}
+
+.eligibility {
+  margin: 80px 0;
+}
+
+.eligibility_description {
+  width: 40%;
+  margin-inline: auto;
+  /* border: 1px solid red; */
+}
+@media (max-width:768px) {
+  .eligibility_description {
+    width: 90%;
+  }
+}
+.eligibility_description h3 {
+  text-align: center;
+  color: var(--primary-color);
+  margin-bottom: 20px;
+  width: 70%;
+  margin-inline: auto;
+}
+
+.eligibility_description h2 {
+  margin-top: 20px;
+  color: var(--primary-color);
+}
+
+/* @media (max-width: 1024px) {
+  .eligibility_description {
+    width: 85%;
+  }
+} */
+@media (max-width: 425px) {
+  .eligibility_description h3 {
+    width: 95%;
+  }
+}
+
+.prerequisites {
+  width: 85%;
+  margin-inline: auto;
+}
+
+.prerequisites li {
+  margin-bottom: 15px;
+}
+
+.talk-to-consultant {
+  white-space: wrap;
+  margin-inline: auto;
+  display: flex;
+  align-items: center;
+  padding: 0.6rem 1rem;
+  border: none;
+  font-weight: 600;
+  font-family: "Poppins";
+}
+.how-to-get-started__content h2 {
+  color: var(--primary-color);
+  text-align: center;
+}
+
+.how-to-get-started__section {
+  margin-top: 5rem;
+}
+.how-to-get-started {
+  display: flex;
+  align-items: center;
+  /* border: 1px solid red; */
+  margin-inline: auto;
+  width: 40%;
+}
+.how-to-get-started img {
+  margin-right: 2rem;
+  height: 80%;
+}
+
+.description__section {
+  margin: 3rem 0;
+  width: 75%;
+}
+.description__section .step-count {
+  color: #a02803;
+  font-weight: 700;
+}
+.description__section h4 {
+  color: var(--primary-color);
+}
+
+.description__section p {
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .how-to-get-started img {
+    margin-right: unset;
+    height: unset;
+    display: none;
+  }
+  .description__section {
+    width: 90%;
+    margin-inline: auto;
+    text-align: center;
+  }
+  .how-to-get-started {
+    width: 85%;
+  }
+}
+
+.ai-ready {
+  margin-top: 50px;
+  background: linear-gradient(
+      to right,
+      rgba(0, 34, 85, 0.5),
+      rgba(0, 34, 85, 0.5)
+    ),
+    url("../../../../public/assets/bg/ctaBg.png");
+  background-size: cover;
+  background-position: center;
+  padding: 100px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+}
+
+.ai_ready__section {
+  /* border: 1px solid red; */
+  width: 80%;
+  margin-inline: auto;
+  text-align: center;
+  color: white;
+}
+.ai_ready__section > * {
+  margin-bottom: 25px;
+}
+
+.ai_ready__section button {
+  font-family: "Poppins";
+  font-weight: 600;
+  background-color: #1358db;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 1rem 2.5rem;
+  cursor: pointer;
+}
+
+.modal {
+  z-index: 100000;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.8);
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: none;
+  transition: opacity 0.4s ease-in-out;
+}
+
+.form-class {
+  position: relative;
+  background-color: #fff;
+  font-family: "Poppins";
+  padding: 1.5rem;
+  width: 95%;
+  max-width: 550px;
+  margin-inline: auto;
+  border-radius: 5px;
+  top: 20%;
+  transform: translateY(-50%, 50%);
+}
+
+.close-modal {
+  position: absolute;
+  right: 20px;
+  top: 5px;
+  cursor: pointer;
+}
+
+.form-form div {
+  margin: 1rem 0;
+  display: flex;
+}
+.form-form div > * {
+  flex: 1;
+}
+
+.form-form .email-input {
+  width: 97%;
+  border-radius: 3px;
+  border: 1px solid grey;
+}
+.form-form .notice {
+  width: 97%;
+}
+
+.form-form textarea,
+.form-form select,
+.form-form input {
+  border-radius: 3px;
+  border: 1px solid grey;
+  padding: 0.5rem 1rem;
+  font-family: "Poppins";
+  margin-right: 1rem;
+}
+
+.form-form .newsletter p {
+  flex: 110;
+  font-size: 0.8rem;
+}
+.country-phone select {
+  width: 50%;
+}
+.input-names > * {
+  width: 50%;
+}
+.job-title-company > * {
+  width: 50%;
+}
+.submit-btn {
+  background-color: var(--primary-color);
+  color: white;
+  font-family: "Poppins";
+  border: none;
+  padding: 0.8rem 0;
+  border-radius: 3px;
+  box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.35);
+}
