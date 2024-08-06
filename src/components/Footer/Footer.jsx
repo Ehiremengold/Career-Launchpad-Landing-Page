@@ -1,82 +1,26 @@
 import "./Footer.css";
-import arrowRight from "../../../public/assets/svg/arrow_right.svg";
-import facebookIcon from "../../../public/assets/svg/facebook.svg";
-import instagramIcon from "../../../public/assets/svg/instagram.svg";
-import linkedinIcon from "../../../public/assets/svg/linkedin.svg";
-import twitterIcon from "../../../public/assets/svg/x.svg";
+
+import * as socialIcons from "../../../public/assets/social-media-icons/utils.js";
+
 const Footer = () => {
   return (
     <footer>
       <div className="upper-footer">
         <div className="footer-content">
           <div>
-            <p>Featured Programmes</p>
+            <p>Career Paths</p>
             <ul>
               <a href="">
-                <li>AI Engineer</li>
+                <li>Data Analyst</li>
               </a>
               <a href="">
-                <li>Cybersecurity Engineer</li>
+                <li>Business Analyst</li>
               </a>
               <a href="">
-                <li>Data Engineer</li>
+                <li>Cybersecurity</li>
               </a>
               <a href="">
-                <li>Expert Data Scientist</li>
-              </a>
-            </ul>
-          </div>
-
-          <div>
-            <p>Featured Courses</p>
-            <ul>
-              <a href="">
-                <li>AI Application Development</li>
-              </a>
-              <a href="">
-                <li>DataOps and Microservices for Big Data Solutions</li>
-              </a>
-              <a href="">
-                <li>Build Deep Learning Models</li>
-              </a>
-              <a href="">
-                <li>Credit Risk Analytics and Modelling</li>
-              </a>
-              <a href="">
-                <li>
-                  Decision Analytics Use Case Framing, Development and
-                  Management
-                </li>
-              </a>
-            </ul>
-          </div>
-
-          <div>
-            <p>Resources</p>
-            <ul>
-              <a href="">
-                <li>Blogs</li>
-              </a>
-              <a href="">
-                <li>Course Catalogue</li>
-              </a>
-              <a href="">
-                <li>Program Catalogue</li>
-              </a>
-              <a href="">
-                <li>Events</li>
-              </a>
-              <a href="">
-                <li>Insight Center</li>
-              </a>
-              <a href="">
-                <li>Delegate Success</li>
-              </a>
-              <a href="">
-                <li>Career Development Services</li>
-              </a>
-              <a href="">
-                <li>Enterprise People 4.0 Services</li>
+                <li>HR Analyst</li>
               </a>
             </ul>
           </div>
@@ -85,73 +29,73 @@ const Footer = () => {
             <p>Company</p>
             <ul>
               <a href="">
-                <li>About Pairview</li>
+                <li>About</li>
               </a>
               <a href="">
-                <li>Contact Us</li>
+                <li>Blog</li>
               </a>
               <a href="">
-                <li>Meet Our Team</li>
+                <li>Careers</li>
               </a>
               <a href="">
-                <li>Meet Our Consultants</li>
-              </a>
-              <a href="">
-                <li>Policies</li>
+                <li>Press</li>
               </a>
             </ul>
           </div>
-        </div>
-        <div className="footer-contact-us">
-          <div className="first-sect">
-            <p>Connect with us</p>
-            <img src={arrowRight} alt="" />
+
+          <div>
+            <p>Legal</p>
+            <ul>
+              <a href="">
+                <li>Claim</li>
+              </a>
+              <a href="">
+                <li>Privacy</li>
+              </a>
+              <a href="">
+                <li>Terms</li>
+              </a>
+            </ul>
           </div>
-          <div className="contact-continent-row">
-            <div className="contact-continent">
-              <p>Europe</p>
-              <div className="social-media-icons">
-                <img src={facebookIcon} alt="" />
-                <img src={twitterIcon} alt="" />
-                <img src={instagramIcon} alt="" />
-                <img src={linkedinIcon} alt="" />
-              </div>
-            </div>
-            <div className="contact-continent">
-              <p>Africa</p>
-              <div className="social-media-icons">
-                <img src={facebookIcon} alt="" />
-                <img src={twitterIcon} alt="" />
-                <img src={instagramIcon} alt="" />
-                <img src={linkedinIcon} alt="" />
-              </div>
-            </div>
+
+          <div>
+            <p>Request A Call Back</p>
+            <span>
+              Book a consultation today to speak with one of our career experts
+              and get started
+            </span>
+            <button className="book-call-btn">Book Call</button>
           </div>
         </div>
       </div>
 
       <div className="lower-footer">
         <div className="d-flex">
+          <div className="socials">
+            <div className="social-container">
+              <img className="social-icon" src={socialIcons.facebook} alt="" />
+            </div>
+            <div className="social-container">
+              <img className="social-icon" src={socialIcons.instagram} alt="" />
+            </div>
+            <div className="social-container">
+              <img className="social-icon" src={socialIcons.linkedin} alt="" />
+            </div>
+            <div className="social-container">
+              <img className="social-icon" src={socialIcons.youtube} alt="" />
+            </div>
+          </div>
           <div className="footer-footer-content">
-            <p>Terms of Use</p>
+            <p>Terms & Conditions</p>
 
             <span>&#124;</span>
 
             <p>Privacy Policy</p>
-            <span>&#124;</span>
-
-            <p>Cookies</p>
-            <span>&#124;</span>
-
-            <p>Web Accessibility</p>
-            <span>&#124;</span>
-
-            <p>Legal Disclaimer</p>
           </div>
 
           <p className="year-copy">
-            All Right Reserved &copy; 
-            {" "} {new Date().getFullYear()}  Pairviewtraining.com 
+            All Right Reserved &copy; {new Date().getFullYear()}{" "}
+            <strong>Stackwisr.co.uk</strong>
           </p>
         </div>
       </div>

@@ -1,79 +1,45 @@
 import "./NavBar.css";
 import logo from "../../../public/assets/logo/logo.png";
-import arrowIcon from "../../../public/assets/svg/arrow.svg";
-import menuIcon from "../../../public/assets/svg/menu.svg";
-import menuCloseIcon from "../../../public/assets/svg/menu-close.png";
-import { useState } from "react";
-
-// eslint-disable-next-line react/prop-types
-const NavBar = ({ setVisibleSection }) => {
-  const [menuOpen, setMenuOpen] = useState(false);
-
-  const toggleMenu = () => {
-    setMenuOpen(!menuOpen);
-  };
-
-  const handleMouseEnter = (section) => {
-    setVisibleSection(section);
-  };
-
-  const handleMouseLeave = () => {
-    setVisibleSection(null);
-  };
+import * as socialIcons from "../../../public/assets/social-media-icons/utils.js";
+import arrowDownIcon from "../../../public/assets/svg/arrow-down.svg";
+import menubar from "../../../public/assets/svg/menu.svg"
+const NavBar = () => {
   return (
     <nav>
-      <a href="/">
-        <div className="logo">
-          <img src={logo} alt="Pairview training" />
-        </div>
-      </a>
-      <div className="hamburger-icon" onClick={toggleMenu}>
-        <img src={menuIcon} alt="" />
+      <div className="logo">
+        <a href="">
+          <img src={logo} alt="StackWisr" />
+        </a>
       </div>
-      <div className={`nav-items ${menuOpen ? "active" : ""}`}>
-        <div className="close" onClick={toggleMenu}>
-          <img src={menuCloseIcon} alt="" />
+
+      <ul className="nav-items">
+        <li className="nav-item dropdown">
+          Career Paths
+          <img src={arrowDownIcon} alt="" />
+        </li>
+        <li className="nav-item">Our Success</li>
+        <li className="nav-item">Blog</li>
+      </ul>
+
+      <div className="about__socials">
+        <p>About us</p>
+        <div className="socials">
+          <div className="social-container">
+            <img className="social-icon" src={socialIcons.facebook} alt="" />
+          </div>
+          <div className="social-container">
+            <img className="social-icon" src={socialIcons.instagram} alt="" />
+          </div>
+          <div className="social-container">
+            <img className="social-icon" src={socialIcons.linkedin} alt="" />
+          </div>
+          <div className="social-container">
+            <img className="social-icon" src={socialIcons.youtube} alt="" />
+          </div>
         </div>
-        <ul>
-          <li
-            className="more executive-talent"
-            onMouseEnter={() => handleMouseEnter("exec-talent-section")}
-            onMouseLeave={handleMouseLeave}
-          >
-            <a href="#">Executive Talent Sponsorship Program</a>
-            <img src={arrowIcon} className="arrow-rotate" alt="" />
-            <div className="orange-line"></div>
-          </li>
-          <li>
-            <a href="">Career Bootcamp</a>
-            <div className="orange-line"></div>
-          </li>
-          <li
-            className="more how-we-work"
-            onMouseEnter={() => handleMouseEnter("how-we-work-section")}
-            onMouseLeave={handleMouseLeave}
-          >
-            <a href="#">How We Work</a>
-            <img src={arrowIcon} className="arrow-rotate" alt="" />
-            <div className="orange-line"></div>
-          </li>
-          <li
-            className="more for-enterprise"
-            onMouseEnter={() => handleMouseEnter("for-enterprise-section")}
-            onMouseLeave={handleMouseLeave}
-          >
-            <a href="#">For Enterprise</a>
-            <img src={arrowIcon} className="arrow-rotate" alt="" />
-            <div className="orange-line"></div>
-          </li>
-          <li>
-            <a href="#">Events</a>
-            <div className="orange-line"></div>
-          </li>
-        </ul>
       </div>
-      <div className="country-code">
-        <p>NG</p>
+      <div className="menu-bar">
+        <img src={menubar} alt="" />
       </div>
     </nav>
   );

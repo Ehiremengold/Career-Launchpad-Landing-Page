@@ -1,5 +1,8 @@
 :root {
-  --primary-color: #002255;
+  --primary-color: #f1f5fc;
+  --primary-font-color: #464f6d;
+  --medium-gray: hsl(0, 0%, 41%);
+  --body-font-color: #01204f;
 }
 
 *,
@@ -10,8 +13,13 @@
   box-sizing: border-box;
 }
 
+p {
+  margin: 0;
+  padding: 0;
+}
+
 body {
-  font-family: "Poppins", sans-serif;
+  font-family: "Poppins", Arial;
   max-width: 100%;
   width: 2000px;
   margin-inline: auto;

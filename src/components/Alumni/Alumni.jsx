@@ -20,7 +20,7 @@ const Alumni = () => {
   return (
     <section className="alumni">
       <div className="testimonial-section">
-        <h2>What Our Alumni are Saying About Job Offer Premium Guarantee</h2>
+        <h2>Real stories, Real success</h2>
         <div className="testimonial-container">
           <button
             className={`testimonial-nav left ${
