@@ -7,54 +7,30 @@ import { Link, animateScroll as scroll } from "react-scroll";
 import { scrollTo } from "react-scroll/modules/mixins/scroller.js";
 
 const NavBar = () => {
-  const backToTop = () => {
-    scroll.scrollToTop();
-  };
-
   return (
     <nav>
-      <div className="logo" onClick={backToTop()}>
-        <a href="">
+      <div className="logo">
+        <a href="/">
           <img src={logo} alt="StackWisr" />
         </a>
       </div>
 
       <ul className="nav-items">
-        <Link
-          className="nav-item dropdown"
-          to="explore-paths"
-          spy={true}
-          smooth={true}
-          offset={-50}
-          duration={500}
-        >
-          Career Paths
-          <img src={arrowDownIcon} alt="" />
-        </Link>
-        <Link
-          className="nav-item"
-          to="alumni"
-          spy={true}
-          smooth={true}
-          offset={-50}
-          duration={500}
-        >
-          Our Success
-        </Link>
-        <Link
-          className="nav-item"
-          to="blog__section"
-          spy={true}
-          smooth={true}
-          offset={-50}
-          duration={500}
-        >
-          Blog
-        </Link>
+        <l1 className="nav-item dropdown">
+          <a href="/explore-paths"></a>Career Paths
+        </l1>
+        <li className="nav-item">
+          <a href="/alumni">Our Success</a>
+        </li>
+        <li className="nav-item">
+          <a href="/blog">Blog</a>
+        </li>
       </ul>
 
       <div className="about__socials">
-        <p>About us</p>
+        <a href="">
+          <p>About us</p>
+        </a>
         <div className="socials">
           <div className="social-container">
             <img className="social-icon" src={socialIcons.facebook} alt="" />
