@@ -108,7 +108,9 @@
   position: relative;
   /* border: 1px solid red; */
 }
-
+.more-paths {
+  display: none;
+}
 @media (min-width: 1024px) {
   .more-paths {
     position: absolute;
