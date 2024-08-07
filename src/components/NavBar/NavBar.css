@@ -21,20 +21,47 @@ nav .nav-items {
   margin-left: 2.5rem;
 }
 
-nav .nav-item{
+nav .nav-item {
   cursor: pointer;
 }
 
 .menu-bar {
   width: 2rem;
   display: none;
+  z-index: 200;
+}
+.nav-combined {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex: 1;
+  /* border: 1px solid red; */
 }
 
 @media (max-width: 768px) {
-  nav .nav-items,
-  nav .about__socials {
+  .nav-combined{
     display: none;
   }
+  .nav-combined.show {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    right: 0;
+    top: 10px;
+    width: 60%;
+    background-color: var(--primary-color);
+  }
+
+  .nav-combined .about__socials,
+  .nav-combined .nav-items {
+    flex-direction: column;
+  }
+
+  .nav-combined .about__socials > *,
+  .nav-combined .nav-items > * {
+    margin: 4.3rem 0;
+  }
+
   .logo {
     width: 40%;
   }
