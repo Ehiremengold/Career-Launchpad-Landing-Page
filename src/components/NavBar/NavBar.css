@@ -21,6 +21,10 @@ nav .nav-items {
   margin-left: 2.5rem;
 }
 
+nav .nav-item{
+  cursor: pointer;
+}
+
 .menu-bar {
   width: 2rem;
   display: none;

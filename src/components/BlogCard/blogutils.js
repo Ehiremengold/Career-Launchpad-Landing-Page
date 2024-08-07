@@ -17,11 +17,10 @@ export const blogPosts = [
     date: "6th August, 2024",
     image: "../../../public/assets/blog/blog-img-3.jpg",
   },
-  // {
-  //   title:
-  //     "AI and Machine Learning: Key Skills You Need for a Lucrative Career in 2024",
-  //   author: "Abisola Olayinka",
-  //   date: "15th August, 2024",
-  //   image: "../../../public/assets/blog/blog-img-4.jpg",
-  // },
+  {
+    title: "Emerging Technologies to Watch in 2024: Stay Ahead of the Curve",
+    author: "Seyi Ayinde",
+    date: "3rd August, 2024",
+    image: "../../../public/assets/blog/blog-img-4.jpg",
+  },
 ];

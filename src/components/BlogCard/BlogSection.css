@@ -1,5 +1,5 @@
 .blog__section {
-  margin: 2.5rem 0;
+  margin: 4rem 0;
   font-size: clamp(25px, 2vw, 80px);
   color: var(--body-font-color);
 }
@@ -23,39 +23,39 @@
 }
 @media (min-width: 1024px) {
   .blog__content {
-    width: 75%;
+    width: 85%;
   }
 }
+
 .blog-card {
-  cursor: pointer;
-  margin: 1rem;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   background-color: white;
-  border-radius: 4px;
-  max-width: 400px;
   box-shadow: 2px 3px 5px 5px rgba(96, 96, 96, 0.4);
+  border-radius: 8px;
+  margin: 1rem;
 }
-.blog-details__section {
-  padding: 1rem;
-}
-.blog-details__section h5 {
-  color: var(--body-font-color);
-  margin-bottom: 0.5rem;
-  font-size: clamp(10px, 1rem, 70px);
-  transition: text-decoration 0.4s ease-in;
-}
-.blog-details__section h5:hover {
-  text-decoration: underline;
-}
-.post-img img {
-  width: 100%;
-  border-top-right-radius: 4px;
 
-  border-top-left-radius: 4px;
+@media (min-width: 1024px) {
+  .blog-card {
+    aspect-ratio: 1 / 1;
+    flex: 1 1 0;
+  }
+}
+
+.blog-card .post-img .blog-img {
+  width: 100%;
   object-fit: contain;
 }
 
+.blog-details__section {
+  margin: 1rem;
+}
+.blog-details__section h6 {
+  font-size: clamp(18px, 1rem, 50px);
+  margin-bottom: 0.5rem;
+}
 
 .blog-time-stamp,
 .blog-author__details {

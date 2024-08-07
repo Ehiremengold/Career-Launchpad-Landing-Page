@@ -2,7 +2,9 @@ import "./NavBar.css";
 import logo from "../../../public/assets/logo/logo.png";
 import * as socialIcons from "../../../public/assets/social-media-icons/utils.js";
 import arrowDownIcon from "../../../public/assets/svg/arrow-down.svg";
-import menubar from "../../../public/assets/svg/menu.svg"
+import menubar from "../../../public/assets/svg/menu.svg";
+import { useScroll } from "../../ScrollContext.jsx";
+
 const NavBar = () => {
   return (
     <nav>
@@ -13,12 +15,12 @@ const NavBar = () => {
       </div>
 
       <ul className="nav-items">
-        <li className="nav-item dropdown">
+        <li className="nav-item dropdown" onClick={() => scrollTo("#career-paths")}>
           Career Paths
           <img src={arrowDownIcon} alt="" />
         </li>
-        <li className="nav-item">Our Success</li>
-        <li className="nav-item">Blog</li>
+        <li className="nav-item" onClick={() => scrollTo("#our-success")}>Our Success</li>
+        <li className="nav-item" onClick={() => scrollTo("#blog")}>Blog</li>
       </ul>
 
       <div className="about__socials">

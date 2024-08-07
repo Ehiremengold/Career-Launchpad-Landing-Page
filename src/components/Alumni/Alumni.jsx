@@ -18,7 +18,7 @@ const Alumni = () => {
     }
   };
   return (
-    <section className="alumni">
+    <section className="alumni" id="our-success">
       <div className="testimonial-section">
         <h2>Real stories, Real success</h2>
         <div className="testimonial-container">
