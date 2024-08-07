@@ -1,11 +1,4 @@
-import { useLayoutEffect, useRef } from "react";
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-
-gsap.registerPlugin(ScrollTrigger);
-
-const CTASection = ({ isMounted }) => {
-  const sectionRef = useRef(null);
+const CTASection = () => {
 
   const countries = [
     "Country 1",
@@ -20,28 +13,10 @@ const CTASection = ({ isMounted }) => {
     "Country 10",
   ];
 
-  useLayoutEffect(() => {
-    if (!isMounted) return;
-    const ctx = gsap.context(() => {
-      gsap.from(".text-section, .form-section", {
-        scrollTrigger: {
-          trigger: ".cta__section",
-          start: "top 80%", // Adjust this to control when the animation starts
-          end: "bottom 20%",
-          toggleActions: "play none none none",
-        },
-        opacity: 0,
-        y: 50,
-        duration: 1,
-        stagger: 0.3,
-        ease: "power2.out",
-      });
-    }, sectionRef);
-    return () => ctx.revert();
-  }, []);
+  
 
   return (
-    <section className="cta__section" ref={sectionRef}>
+    <section className="cta__section hidden">
       <div className="cta__section_content">
         <div className="text-section">
           <h2>Speak with our career consultant</h2>

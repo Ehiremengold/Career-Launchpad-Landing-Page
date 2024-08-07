@@ -1,29 +1,9 @@
-/* eslint-disable react/prop-types */
-import { useLayoutEffect, useRef } from "react";
-import gsap from "gsap";
-
-const CareerPaths = ({ isMounted }) => {
-  const sectionRef = useRef(null);
-
-  useLayoutEffect(() => {
-    if (!isMounted) return;
-    const ctx = gsap.context(() => {
-      gsap.from("#career-paths", {
-        opacity: 0,
-        y: 50,
-        duration: 1,
-        stagger: 0.3,
-        ease: "power2.out",
-      });
-    }, sectionRef);
-
-    return () => ctx.revert();
-  }, []);
-
+import morePaths from "../../../public/assets/icons/right-arrow.png";
+const CareerPaths = () => {
   return (
-    <section className="explore-paths" id="career-paths" ref={sectionRef}>
+    <section className="explore-paths hidden" id="career-paths">
       <div className="wrapper">
-        <div>
+        <div className="explore-header">
           <h2>Explore Our Career Paths</h2>
           <p>
             Unlock new career opportunities in the most in-demand fields with
@@ -59,6 +39,9 @@ const CareerPaths = ({ isMounted }) => {
             <a href="">Learn more</a>
           </div>
         </div>
+      </div>
+      <div className="more-paths">
+        <img src={morePaths} alt="" />
       </div>
     </section>
   );

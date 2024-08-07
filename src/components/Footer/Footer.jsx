@@ -4,7 +4,7 @@ import * as socialIcons from "../../../public/assets/social-media-icons/utils.js
 
 const Footer = () => {
   return (
-    <footer>
+    <footer className="hidden">
       <div className="upper-footer">
         <div className="footer-content">
           <div>

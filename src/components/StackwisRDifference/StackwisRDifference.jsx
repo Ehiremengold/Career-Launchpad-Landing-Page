@@ -2,9 +2,6 @@ import Lottie from "react-lottie";
 import certified from "../../../public/assets/lottie/certified.json";
 import gotJob from "../../../public/assets/lottie/got-job.json";
 import fourStars from "../../../public/assets/lottie/four-star.json";
-import { useLayoutEffect, useRef } from "react";
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 const defaultOptions = (animationData) => ({
   loop: true,
@@ -15,41 +12,18 @@ const defaultOptions = (animationData) => ({
   },
 });
 
-gsap.registerPlugin(ScrollTrigger);
 
-const StackwisRDifference = ({ isMounted }) => {
-  const sectionRef = useRef(null);
-
-  useLayoutEffect(() => {
-    if (!isMounted) return;
-    const ctx = gsap.context(() => {
-      gsap.from(".difference-card", {
-        scrollTrigger: {
-          trigger: ".wwd__content",
-          start: "top 80%", // Adjust this to control when the animation starts
-          end: "bottom 20%",
-          toggleActions: "play none none none",
-        },
-        opacity: 0,
-        y: 50,
-        duration: 1,
-        stagger: 0.3,
-        ease: "power2.out",
-      });
-    }, sectionRef);
-
-    return () => ctx.revert();
-  }, []);
-
+const StackwisRDifference = () => {
+  
   return (
-    <section className="wwd__content" ref={sectionRef}>
+    <section className="wwd__content hidden">
       <h1>Experience the StackwisR Difference</h1>
       <div className="wwd-d-flex">
         <div className="difference-card">
           <Lottie
             options={defaultOptions(certified)}
-            height={"40%"}
-            width={"40%"}
+            height={"60%"}
+            width={"80%"}
           />
           <h1>2000+</h1>
           <p>Professionals and Specialists Developed</p>
@@ -57,8 +31,8 @@ const StackwisRDifference = ({ isMounted }) => {
         <div className="difference-card">
           <Lottie
             options={defaultOptions(gotJob)}
-            height={"40%"}
-            width={"40%"}
+            height={"60%"}
+            width={"80%"}
           />
           <h1>98%</h1>
           <p>
@@ -68,8 +42,8 @@ const StackwisRDifference = ({ isMounted }) => {
         <div className="difference-card">
           <Lottie
             options={defaultOptions(fourStars)}
-            height={"40%"}
-            width={"40%"}
+            height={"60%"}
+            width={window.innerWidth <= 768 ? "60%" : "65%"}
           />
           <h1>4.7+</h1>
           <p>Service Excellence Score</p>

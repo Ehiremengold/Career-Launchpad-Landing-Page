@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { testimonials } from "./testimonialData.js";
-
+import "aos/dist/aos.css";
 import navRightArrow from "../../../public/assets/svg/nav-right-arrow.svg";
 import navLeftArrow from "../../../public/assets/svg/nav-left-arrow.svg";
 
@@ -18,7 +18,7 @@ const Alumni = () => {
     }
   };
   return (
-    <section className="alumni" id="our-success">
+    <section className="alumni hidden" id="our-success">
       <div className="testimonial-section">
         <h2>Real stories, Real success</h2>
         <div className="testimonial-container">
