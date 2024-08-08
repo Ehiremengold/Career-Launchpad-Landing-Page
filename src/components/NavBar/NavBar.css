@@ -40,17 +40,24 @@ nav .nav-item {
 
 @media (max-width: 768px) {
   .nav-combined {
-    display: none;
-  }
-
-  .nav-combined.show {
     display: flex;
     flex-direction: column;
+    max-height: 0;
+    overflow: hidden;
+    visibility: hidden;
+    opacity: 0;
+    transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out,
+      visibility 0.3s ease-in-out;
     position: absolute;
     right: 0;
     top: 10px;
     width: 60%;
     background-color: var(--primary-color);
+  }
+
+  .nav-combined.show {
+    max-height: 1000px; /* Set to a large value to ensure it fits the content */
+    visibility: visible;
     opacity: 1;
   }
 
