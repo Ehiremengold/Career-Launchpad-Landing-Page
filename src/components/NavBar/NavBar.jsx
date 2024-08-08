@@ -6,7 +6,7 @@ import closeMenuBar from "../../../public/assets/svg/menu-close.png";
 import { useState } from "react";
 
 const NavBar = () => {
-  const [menuOpen, setMenuOpen] = useState(true);
+  const [menuOpen, setMenuOpen] = useState(false);
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
