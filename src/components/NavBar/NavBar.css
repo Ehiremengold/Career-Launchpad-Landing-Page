@@ -39,10 +39,10 @@ nav .nav-item {
 }
 
 @media (max-width: 768px) {
-  .nav-combined{
+  .nav-combined {
     display: none;
   }
-  
+
   .nav-combined.show {
     display: flex;
     flex-direction: column;
@@ -51,6 +51,7 @@ nav .nav-item {
     top: 10px;
     width: 60%;
     background-color: var(--primary-color);
+    opacity: 1;
   }
 
   .nav-combined .about__socials,
@@ -58,21 +59,17 @@ nav .nav-item {
     flex-direction: column;
   }
 
-  /* .nav-combined .about__socials > *,
-  .nav-combined .nav-items > * {
-    margin: 4.3rem 0;
-  } */
-  .nav-combined .nav-items{
+  .nav-combined .nav-items {
     margin: 13rem 0;
   }
 
-  .nav-combined .nav-items > *{
+  .nav-combined .nav-items > * {
     margin: 1rem 0;
   }
-  .nav-combined .about__socials{
-    margin: 3rem 0;
+  .nav-combined .about__socials {
+    margin: 3rem;
   }
-  .nav-combined .about__socials > *{
+  .nav-combined .about__socials > * {
     margin: 1rem 0;
   }
   .logo {
