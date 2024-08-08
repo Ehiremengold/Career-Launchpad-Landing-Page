@@ -18,7 +18,7 @@ export const blogPosts = [
     image: "/assets/blog/blog-img-3.jpg",
   },
   {
-    title: "Emerging Technologies to Watch in 2024: Stay Ahead of the Curve",
+    title: "Women in Tech: High-Paying Skills and Careers to Pursue in 2024",
     author: "Seyi Ayinde",
     date: "3rd August, 2024",
     image: "/assets/blog/blog-img-4.jpg",

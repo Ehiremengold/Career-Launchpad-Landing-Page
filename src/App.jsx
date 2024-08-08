@@ -13,7 +13,7 @@ function App() {
         <Routes>
           <Route exact path="/" element={<Home />} />
           {/* <Route path="/about" element={<About />} /> */}
-          <Route path="/career-paths" element={<CareerPath />} />
+          <Route path="/explore-paths" element={<CareerPath />} />
           <Route path="*" element={<WildCard />} />
         </Routes>
       </Base>

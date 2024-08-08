@@ -29,9 +29,9 @@ const NavBar = () => {
       </div>
       <div className={`nav-combined ${menuOpen ? "show" : ""}`}>
         <ul className="nav-items">
-          <l1 className="nav-item dropdown">
+          <li className="nav-item dropdown">
             <a href="/explore-paths">Career Paths</a>
-          </l1>
+          </li>
           <li className="nav-item">
             <a href="/alumni">Our Success</a>
           </li>

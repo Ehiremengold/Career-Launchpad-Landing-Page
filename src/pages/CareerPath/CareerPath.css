@@ -1,44 +1,141 @@
-.our-career-paths {
-  margin: 7rem 0;
+.career-cards {
+  margin: 4rem 0;
 }
-.our-career-paths .wrapper h1 {
-  font-size: clamp(16px, 3vw, 35px);
+.career-cards h1 {
+  font-size: clamp(18px, 2vw, 35px);
   color: var(--body-font-color);
 }
 
-.our-career-paths__cards {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 3rem;
+.career-cards p {
+  font-size: clamp(15px, 0.8vw, 20px);
+  color: var(--medium-gray);
+}
+.career-cards h1,
+.career-cards p {
+  text-align: center;
+}
+.career-wrapper {
+  margin-top: 1.5rem;
   width: 85%;
   margin-inline: auto;
-  margin-top: 2rem;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
 }
-
 @media (min-width: 1024px) {
-  .our-career-paths__cards {
+  .career-wrapper {
     width: 80%;
   }
 }
-.our-career-path__card:first-child {
-  grid-row: span 2;
-}
-.our-career-path__card:nth-child(2) {
-  /* grid-column: span 2; */
+.career-card {
+  width: 450px;
+  height: 350px;
+  /* border: 1px solid red; */
+  margin-inline: auto;
+  margin-top: 40px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  border-radius: 0.4rem;
 }
 
-.our-career-path__card:last-child {
-  grid-column: span 3;
+.career-card .children {
+  position: absolute;
+  bottom: -150px;
+  background-color: rgba(1, 32, 79, 0.6);
+  color: white;
+  padding: 1rem;
+  border-top-right-radius: 3rem;
+  transition: all 0.4s ease-in-out;
+}
+.career-card .children h3 {
+  margin-bottom: 1rem;
+}
+.career-card .children p {
+  color: white;
+  text-align: justify;
+  margin-bottom: 1rem;
+}
+.career-card:hover .children {
+  background-color: rgba(1, 32, 79, 0.9);
+  bottom: 0;
+}
+.career-card .children button {
+  background-color: #1c7ce2;
+  color: white;
+  padding: 0.5rem 1.5rem;
+  border-radius: 4px;
+  font-weight: 500;
+  border: none;
+  margin: 0.5rem 0;
+  font-family: "Poppins";
+  cursor: pointer;
+  transition: transform .3s ease-in;
+}
+.career-card .children button:active {
+  transform: scale(0.8);
+}
+.career-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: filter 0.3s ease-in;
+}
+.career-card:hover img {
+  filter: blur(5px);
 }
 .keyword-search {
+  margin: 2rem 0;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 .keyword-search input {
   /* margin: 0 auto; */
-  width: 75%;
+  width: 85%;
   border: 1px solid var(--body-font-color);
   border-radius: 10px;
-  padding: 1.5rem;
+  padding: 1rem 3rem;
+  font-family: "Poppins";
+  background: url("../../../public/assets/svg/search.svg") no-repeat 10px center;
+  background-size: clamp(20px, 1.5vw, 30px);
+}
+
+.keyword-search input {
+  outline: none;
+}
+
+@media (min-width: 1024px) {
+  .keyword-search input {
+    width: 70%;
+  }
+}
+.hero-scroll {
+  position: relative;
+}
+.scroll-down {
+  cursor: pointer;
+  color: white;
+  position: absolute;
+  bottom: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  animation: bounce 0.8s infinite alternate;
+}
+.scroll-down p {
+  margin: 0.5rem;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translate(-50%, 10px); /* Combine translateX and translateY */
+  }
+  100% {
+    transform: translate(-50%, 0); /* Combine translateX and translateY */
+  }
 }

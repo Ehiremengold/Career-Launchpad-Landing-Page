@@ -37,7 +37,6 @@ nav .nav-item {
   flex: 1;
   /* border: 1px solid red; */
 }
-
 @media (max-width: 768px) {
   .nav-combined {
     display: flex;
@@ -51,37 +50,48 @@ nav .nav-item {
     position: absolute;
     right: 0;
     top: 10px;
-    width: 60%;
+    width: 65%;
     background-color: var(--primary-color);
   }
 
   .nav-combined.show {
-    max-height: 1000px; /* Set to a large value to ensure it fits the content */
+    max-height: 1000px; /* Ensure this is enough or use 'none' if content size varies */
     visibility: visible;
     opacity: 1;
+    overflow: visible; /* Allow content to be visible */
   }
 
   .nav-combined .about__socials,
   .nav-combined .nav-items {
     flex-direction: column;
+    /* border: 1px solid green; */
   }
 
+  .nav-combined.show .about__socials,
+  .nav-combined.show .nav-items {
+    margin-bottom: 100%;
+   }
   .nav-combined .nav-items {
-    margin: 13rem 0;
+    margin: 3rem 0;
   }
 
   .nav-combined .nav-items > * {
-    margin: 1rem 0;
+    margin: 1.25rem 0;
   }
+
   .nav-combined .about__socials {
-    margin: 3rem;
+    margin-top: 2rem; /* Adjusted for better spacing */
+    margin-bottom: 2rem; /* Adjusted for better spacing */
   }
+
   .nav-combined .about__socials > * {
-    margin: 1rem 0;
+    margin: 0.8rem 0;
   }
+
   .logo {
     width: 40%;
   }
+
   .menu-bar {
     display: block;
   }
