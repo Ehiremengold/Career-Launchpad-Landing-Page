@@ -3,7 +3,7 @@ import logo from "../../../public/assets/logo/logo.png";
 import * as socialIcons from "../../../public/assets/social-media-icons/utils.js";
 import menubar from "../../../public/assets/svg/menu.svg";
 import closeMenuBar from "../../../public/assets/svg/menu-close.png";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const NavBar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -11,6 +11,14 @@ const NavBar = () => {
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
   };
+
+  useEffect(() => {
+    if (menuOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+  }, [menuOpen]);
 
   return (
     <nav>
