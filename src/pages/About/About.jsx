@@ -17,15 +17,15 @@
 //   return (
 //     <>
 //       <Helmet>
-//         <title>About | Pairview Training</title>
+//         <title>About | Stackwisr Training</title>
 //       </Helmet>
-//       <section className="about-pairview">
+//       <section className="about-Stackwisr">
 //         <div className="content">
 //           <div className="image-container">
-//             <img src={officeImg} alt="About Pairview" />
+//             <img src={officeImg} alt="About Stackwisr" />
 //           </div>
 //           <div className="text-container">
-//             <h2>About Pairview</h2>
+//             <h2>About Stackwisr</h2>
 //             <p>
 //               Our belief is “Knowledge is Power”. Knowledge and insight can
 //               change lives, transform careers, and drive profitable and
@@ -38,11 +38,11 @@
 //         <div className="who-we-are__content">
 //           <h1>WHO WE ARE</h1>
 //           <p>
-//             Pairview was established in 2009 as a business analytics consultancy
-//             and technology training company. Pairview is headquartered in London
-//             and rapidly expanding across the EMEA region. Pairview drives big
+//             Stackwisr was established in 2009 as a business analytics consultancy
+//             and technology training company. Stackwisr is headquartered in London
+//             and rapidly expanding across the EMEA region. Stackwisr drives big
 //             data, analytics, and performance innovation within organisations
-//             through its range of products and services. Pairview works alongside
+//             through its range of products and services. Stackwisr works alongside
 //             businesses as a trusted partner, enhancing expertise, closing skills
 //             gaps and developing their Analytics Centre of Excellence to drive
 //             improvements to productivity, profitability and business growth. We
@@ -51,11 +51,11 @@
 //             services in data and analytics.
 //           </p>
 //           <p>
-//             Pairview was established in 2009 as a business analytics consultancy
-//             and technology training company. Pairview is headquartered in London
-//             and rapidly expanding across the EMEA region. Pairview drives big
+//             Stackwisr was established in 2009 as a business analytics consultancy
+//             and technology training company. Stackwisr is headquartered in London
+//             and rapidly expanding across the EMEA region. Stackwisr drives big
 //             data, analytics, and performance innovation within organisations
-//             through its range of products and services. Pairview works alongside
+//             through its range of products and services. Stackwisr works alongside
 //             businesses as a trusted partner, enhancing expertise, closing skills
 //             gaps and developing their Analytics Centre of Excellence to drive
 //             improvements to productivity, profitability and business growth. We
@@ -151,15 +151,15 @@
 //         </div>
 //       </section>
 
-//       <section className="about-pairview">
+//       <section className="about-Stackwisr">
 //         <div className="content">
 //           <div className="image-container">
-//             <img src={ceoImg} alt="About Pairview" />
+//             <img src={ceoImg} alt="About Stackwisr" />
 //           </div>
 //           <div className="text-container">
 //             <h2>HOW WE LEAD</h2>
 //             <p>
-//               “If there is one thing that all of us at Pairview have in common,
+//               “If there is one thing that all of us at Stackwisr have in common,
 //               it is our passion for excellence and our devotion to making a real
 //               difference for our clients and the wider society. It is ingrained
 //               in our DNA.”

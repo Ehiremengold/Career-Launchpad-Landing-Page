@@ -17,7 +17,7 @@ export const coreValues = [
   {
     title: "Respect for the Individual",
     description:
-      "Valuing diversity and unique contributions, fostering a trusting, open and inclusive environment and treating each person in a manner that reflects Pairview's values.",
+      "Valuing diversity and unique contributions, fostering a trusting, open and inclusive environment and treating each person in a manner that reflects Stackwisr's values.",
   },
   {
     title: "Best People",
