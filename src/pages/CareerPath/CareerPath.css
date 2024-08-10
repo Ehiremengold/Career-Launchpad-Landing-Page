@@ -80,8 +80,9 @@
   height: 100%;
   object-fit: cover;
   object-position: center;
-  transition: filter 0.3s ease-in;
+  transition: filter 0.3s ease-in; 
 }
+
 .career-card:hover img {
   filter: blur(5px);
 }

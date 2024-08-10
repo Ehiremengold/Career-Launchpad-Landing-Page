@@ -40,9 +40,11 @@ const CareerPaths = () => {
           </div>
         </div>
       </div>
-      <div className="more-paths">
-        <img src={morePaths} alt="" />
-      </div>
+      <a href="/explore-paths">
+        <div className="more-paths">
+          <img src={morePaths} alt="" />
+        </div>
+      </a>
     </section>
   );
 };

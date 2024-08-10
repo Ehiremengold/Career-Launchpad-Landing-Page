@@ -5,6 +5,7 @@ import Home from "./pages/Home/Home.jsx";
 // import About from "./pages/About/About.jsx";
 import CareerPath from "./pages/CareerPath/CareerPath.jsx";
 import WildCard from "./WildCard.jsx";
+import CareerDetail from "./pages/CareerPath/CareerDetail.jsx";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Routes>
           <Route exact path="/" element={<Home />} />
           {/* <Route path="/about" element={<About />} /> */}
+          <Route path="/career-detail" element={<CareerDetail />} />
           <Route path="/explore-paths" element={<CareerPath />} />
           <Route path="*" element={<WildCard />} />
         </Routes>
