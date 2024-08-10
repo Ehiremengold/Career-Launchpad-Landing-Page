@@ -6,6 +6,7 @@ import Home from "./pages/Home/Home.jsx";
 import CareerPath from "./pages/CareerPath/CareerPath.jsx";
 import WildCard from "./WildCard.jsx";
 import CareerDetail from "./pages/CareerPath/CareerDetail.jsx";
+import Blog from "./pages/Blog/Blog.jsx";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           {/* <Route path="/about" element={<About />} /> */}
           <Route path="/career-detail" element={<CareerDetail />} />
           <Route path="/explore-paths" element={<CareerPath />} />
+          <Route path="/blog" element={<Blog />} />
           <Route path="*" element={<WildCard />} />
         </Routes>
       </Base>
