@@ -1,7 +1,10 @@
 import morePaths from "../../../public/assets/icons/right-arrow.png";
-const CareerPaths = () => {
+const CareerPaths = ({ isHome }) => {
   return (
-    <section className="explore-paths hidden" id="career-paths">
+    <section
+      className={`explore-paths ${isHome ? "hidden" : ""}`}
+      id="career-paths"
+    >
       <div className="wrapper">
         <div className="explore-header">
           <h2>Explore Our Career Paths</h2>

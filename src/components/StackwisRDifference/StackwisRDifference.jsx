@@ -12,17 +12,15 @@ const defaultOptions = (animationData) => ({
   },
 });
 
-
-const StackwisRDifference = () => {
-  
+const StackwisRDifference = ({ heading, isHomePage }) => {
   return (
-    <section className="wwd__content hidden">
-      <h1>Experience the StackwisR Difference</h1>
+    <section className={`wwd__content ${isHomePage ? "hidden" : ""} `}>
+      <h1>{heading}</h1>
       <div className="wwd-d-flex">
         <div className="difference-card">
           <Lottie
             options={defaultOptions(certified)}
-            height={"60%"}
+            height={"80%"}
             width={"80%"}
           />
           <h1>2000+</h1>
@@ -31,7 +29,7 @@ const StackwisRDifference = () => {
         <div className="difference-card">
           <Lottie
             options={defaultOptions(gotJob)}
-            height={"60%"}
+            height={"80%"}
             width={"80%"}
           />
           <h1>98%</h1>
@@ -42,8 +40,8 @@ const StackwisRDifference = () => {
         <div className="difference-card">
           <Lottie
             options={defaultOptions(fourStars)}
-            height={"60%"}
-            width={window.innerWidth <= 768 ? "60%" : "65%"}
+            height={"80%"}
+            width={"79%"}
           />
           <h1>4.7+</h1>
           <p>Service Excellence Score</p>

@@ -12,7 +12,6 @@ import heroBg from "../../../public/assets/hero-video/hero-bg.jpg";
 import Hero from "../../components/Hero/Hero.jsx";
 
 const Home = () => {
-  
   useEffect(() => {
     const hiddenElements = document.querySelectorAll(".hidden");
     const observer = new IntersectionObserver((entries) => {
@@ -42,9 +41,12 @@ const Home = () => {
           " Future-proof your career with our AI-driven training and career development"
         }
       />
-      <CareerPaths />
+      <CareerPaths isHome={true} />
 
-      <StackwisRDifference />
+      <StackwisRDifference
+        heading={"Experience the StackwisR Difference"}
+        isHomePage={true}
+      />
 
       <Alumni />
 

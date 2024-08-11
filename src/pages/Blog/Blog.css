@@ -204,3 +204,25 @@
   height: 15%;
   margin-right: 0.5rem;
 }
+
+.post-title-details h3,
+.post-details h2 {
+  cursor: pointer;
+  transition: text-decoration 0.3s ease-in-out;
+}
+
+.post-title-details h3:hover,
+.post-details h2:hover {
+  text-decoration: underline;
+}
+
+@media (min-width: 1024px) {
+  .latest-posts-section {
+    border-radius: 5px;
+    padding: 1rem;
+    height: 670px;
+    /* border: 1px solid red; */
+    overflow-y: scroll;
+    box-shadow: inset 2px 2px 5px rgba(96, 96, 96, 0.3);
+  }
+}
