@@ -193,7 +193,7 @@ const About = () => {
           <div className="git-container">
             <img src={images.email} alt="" />
             <h4>Send us an Email</h4>
-            <a href="mailto:info@stckwisr.co.uk">info@stckwisr.co.uk</a>
+            <a href="mailto:info@stackwisr.co.uk">info@stackwisr.co.uk</a>
           </div>
           <div className="git-container">
             <img src={images.location} alt="" />

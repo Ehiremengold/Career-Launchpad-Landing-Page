@@ -1,19 +1,25 @@
+import { useEffect, useState } from "react";
+import axios from "axios";
+
 const CTASection = () => {
+  const [countries, setCountries] = useState([]);
+  useEffect(() => {
+    const getCountries = async () => {
+      try {
+        const response = await axios.get(
+          "https://restcountries.com/v3.1/all?fields=name"
+        );
+        const sortedCounties = response.data
+          .map((country) => country.name.common)
+          .sort((a, b) => a.localeCompare(b));
+        setCountries(sortedCounties);
+      } catch (error) {
+        console.log("Error getting countries: ", error);
+      }
+    };
 
-  const countries = [
-    "Country 1",
-    "Country 2",
-    "Country 3",
-    "Country 4",
-    "Country 5",
-    "Country 6",
-    "Country 7",
-    "Country 8",
-    "Country 9",
-    "Country 10",
-  ];
-
-  
+    getCountries();
+  }, []);
 
   return (
     <section className="cta__section hidden">
@@ -30,6 +36,7 @@ const CTASection = () => {
             </div>
             <input type="text" placeholder="Email" />
             <select name="Country" id="" placeholder="Choose a Country">
+              <option>-- Select a Country --</option>
               {countries.map((country, index) => (
                 <option key={index} value={`${country}`}>
                   {country}

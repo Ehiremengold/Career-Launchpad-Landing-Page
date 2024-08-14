@@ -109,7 +109,7 @@
 
 @media (min-width: 1024px) {
   .section__wrapper {
-    width: 60%;
+    width: 80%;
   }
 
   .wwa__description,
@@ -228,6 +228,13 @@
 .git__cta{
   text-align: center;
   margin: 4rem 0;
+}
+
+@media (max-width:425px) {
+  .git__cta{
+    width: 85%;
+    margin-inline: auto;
+  }
 }
 
 .git__cta h2{
