@@ -48,7 +48,7 @@
   color: White;
 }
 .hero__content {
-  width: 85%;
+  width: 95%;
   margin-inline: auto;
   /* border: 1px solid red; */
   text-align: center;
@@ -56,12 +56,12 @@
 
 @media (min-width: 800px) {
   .hero__content {
-    margin-top: 30%;
+    margin-top: 20%;
   }
 }
 @media (max-width: 768px) {
   .hero__content {
-    margin-top: 25%;
+    margin-top: 35%;
   }
 }
 @media (max-width: 425px) {
@@ -74,7 +74,7 @@
   font-size: clamp(20px, 3vw, 50px);
 }
 .hero__content p {
-  font-size: clamp(12px, 2vw, 20px);
+  font-size: clamp(18px, 2vw, 25px);
 }
 .hero__cta-btns {
   margin-top: 1rem;
