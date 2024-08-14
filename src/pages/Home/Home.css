@@ -119,7 +119,7 @@
 @media (min-width: 1024px) {
   .more-paths {
     position: absolute;
-    right: 6rem;
+    right: 3rem;
     top: 60%;
     transform: translateY(0=-50%, 50%);
     height: 60px;
@@ -148,7 +148,7 @@
 
 @media (min-width: 1024px) {
   .wrapper {
-    width: 75%;
+    width: 85%;
   }
 }
 @media (max-width: 768px) {
@@ -220,7 +220,7 @@
 
 .wwd-d-flex {
   display: flex;
-  width: 80%;
+  width: 85%;
   align-items: center;
   margin-top: 4rem;
   margin-inline: auto;
@@ -229,7 +229,7 @@
 
 @media (min-width: 1024px) {
   .wwd-d-flex {
-    width: 60%;
+    width: 80%;
   }
 }
 
