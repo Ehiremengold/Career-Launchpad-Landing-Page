@@ -11,7 +11,7 @@
   text-align: center;
   color: #fff;
   position: absolute;
-  top: 25%;
+  top: 10vh;
   width: 80%;
   left: 50%;
   transform: translate(-50%, 50%);
@@ -21,7 +21,7 @@
   font-size: clamp(23px, 2vw, 35px);
 }
 .about-hero-info p {
-  font-size: clamp(18px, 1vw, 30px);
+  font-size: clamp(15px, 1vw, 30px);
 }
 .about-hero img {
   width: 100%;
@@ -66,7 +66,7 @@
   margin-inline: auto;
   width: 90%;
   flex-wrap: wrap;
-  gap: 2rem;
+  gap: 1rem;
   margin-top: 4rem;
   /* border: 1px solid red; */
 }
@@ -74,6 +74,10 @@
 .container-2,
 .container-3 {
   text-align: center;
+}
+
+.container-1, .container-2{
+  margin-right: 2rem;
 }
 
 .container-1 p,
@@ -109,7 +113,7 @@
 
 @media (min-width: 1024px) {
   .section__wrapper {
-    width: 80%;
+    width: 90%;
   }
 
   .wwa__description,
@@ -153,6 +157,7 @@
 .hwd__description p,
 .oa__description p,
 .git__description p {
+  text-align: justify;
   color: var(--medium-gray);
   font-size: clamp(17px, 1vw, 36px);
   /* margin-bottom: 1rem; */
@@ -163,6 +168,7 @@
   flex: 1;
 }
 
+
 .wwa__img img,
 .wwd__img img {
   width: 100%;
@@ -171,14 +177,14 @@
 .differ-container {
   display: flex;
   align-items: center;
-  flex: 1;
-  gap: 1rem;
+  /* flex: 1; */
+  gap: 1.5rem;
 }
 .oa-icon,
 .differ-container .differ-icon {
   background-color: #1c7ce2;
-  padding: 0.5rem;
-  width: 60px;
+  padding: 1rem;
+  width: 50px;
   height: 30px;
   border-radius: 7px;
   display: flex;
@@ -189,7 +195,7 @@
 }
 
 .oa-container {
-  flex: 1 ;
+  /* flex: 1; */
   border: 1px solid rgba(93, 93, 93, 0.2);
   border-radius: 5px;
   padding: 1rem;

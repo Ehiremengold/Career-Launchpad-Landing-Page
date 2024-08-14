@@ -3,6 +3,7 @@ import axios from "axios";
 
 const CTASection = () => {
   const [countries, setCountries] = useState([]);
+
   useEffect(() => {
     const getCountries = async () => {
       try {
@@ -22,7 +23,7 @@ const CTASection = () => {
   }, []);
 
   return (
-    <section className="cta__section hidden">
+    <section className="cta__section hidden" id="cta__section">
       <div className="cta__section_content">
         <div className="text-section">
           <h2>Speak with our career consultant</h2>
@@ -44,8 +45,10 @@ const CTASection = () => {
               ))}
             </select>
             <input type="text" placeholder="Phone" />
-            <button className="cta-btn">BOOK A CALL</button>
           </form>
+          <a href="tel:+2348009078235">
+            <div className="cta-btn">BOOK A CALL</div>
+          </a>
         </div>
       </div>
     </section>

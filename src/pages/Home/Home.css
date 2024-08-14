@@ -43,6 +43,10 @@
   z-index: -1;
 }
 
+#title-1,
+#subtitle-1 {
+  color: White;
+}
 .hero__content {
   width: 85%;
   margin-inline: auto;
@@ -52,7 +56,7 @@
 
 @media (min-width: 800px) {
   .hero__content {
-    margin-top: 20%;
+    margin-top: 30%;
   }
 }
 @media (max-width: 768px) {
@@ -67,13 +71,13 @@
 }
 
 .hero__content h1 {
-  font-size: clamp(30px, 4vw, 80px);
+  font-size: clamp(20px, 3vw, 50px);
 }
 .hero__content p {
-  font-size: clamp(12px, 4vw, 30px);
+  font-size: clamp(12px, 2vw, 20px);
 }
 .hero__cta-btns {
-  margin-top: 2rem;
+  margin-top: 1rem;
 }
 
 .hero__cta-btns button {
@@ -97,12 +101,6 @@
   color: white;
   cursor: pointer;
   position: relative;
-  transition: background-color 0.2s ease-in-out, border 0.3s ease-in-out;
-}
-
-.hero__cta-btns:hover .get-started {
-  background-color: transparent;
-  border: 1px solid white;
 }
 
 .explore-header {
@@ -219,27 +217,30 @@
 }
 
 .wwd-d-flex {
-  display: flex;
-  width: 85%;
-  align-items: center;
+  display: grid;
+  grid-template-columns: 1fr;
+  width: 80%;
+  align-items: stretch;
+  flex-wrap: wrap;
   margin-top: 4rem;
   margin-inline: auto;
-  gap: 3rem; /* Optional: Adds space between cards */
+  gap: 2rem; /* Optional: Adds space between cards */
 }
-
 @media (min-width: 1024px) {
   .wwd-d-flex {
-    width: 70%;
+    grid-template-columns: repeat(3, 1fr);
   }
 }
+
+
 
 .difference-card {
   background-color: white;
   border-radius: 5px;
-  padding: 2rem;
+  padding: 1.5rem;
   box-shadow: 2px 3px 5px 5px rgba(96, 96, 96, 0.4);
-  flex: 1 1 0; /*Allows cards to grow and shrink equally*/
-  aspect-ratio: 1 / 1; /* Ensures square shape */
+  /* flex: 1 1 0;  */
+  /* aspect-ratio: 1 / 1;  */
   /* display: flex; */
   /* flex-direction: column; */
   /* justify-content: center; */
@@ -253,7 +254,7 @@
 }
 
 .difference-card h1 {
-  font-size: clamp(35px, 3vw, 80px);
+  font-size: clamp(20px, 2vw, 50px);
   text-align: left;
   margin-top: 1rem;
 }
@@ -261,6 +262,7 @@
 .difference-card p {
   color: var(--medium-gray);
   text-align: left;
+  font-size: clamp(15px, 1vw, 30px);
 }
 
 .alumni {
@@ -416,7 +418,7 @@
   border-radius: 5px;
   padding: 3rem 2rem;
   width: 50%;
-  max-width: 750px;
+  max-width: 550px;
 }
 
 .form-section form input,
@@ -438,11 +440,13 @@
 .cta-btn {
   background-color: var(--body-font-color);
   color: white;
-  padding: 1.25em;
+  padding: 0.75em;
   border: none;
   border-radius: 4px;
   font-weight: 600;
   font-family: "Poppins";
   margin-inline: auto;
-  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

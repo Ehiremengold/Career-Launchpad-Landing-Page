@@ -71,19 +71,43 @@ const Footer = () => {
 
       <div className="lower-footer">
         <div className="d-flex">
-          <div className="socials">
-            <div className="social-container">
-              <img className="social-icon" src={socialIcons.facebook} alt="" />
-            </div>
-            <div className="social-container">
-              <img className="social-icon" src={socialIcons.instagram} alt="" />
-            </div>
-            <div className="social-container">
-              <img className="social-icon" src={socialIcons.linkedin} alt="" />
-            </div>
-            <div className="social-container">
-              <img className="social-icon" src={socialIcons.youtube} alt="" />
-            </div>
+        <div className="socials">
+            <a href="https://www.facebook.com/StackwisR">
+              <div className="social-container">
+                <img
+                  className="social-icon"
+                  src={socialIcons.facebook}
+                  alt="facebook"
+                />
+              </div>
+            </a>
+            <a href="https://www.instagram.com/stackwisr?igsh=M2JteDBuY3k3cTh6">
+              <div className="social-container">
+                <img
+                  className="social-icon"
+                  src={socialIcons.instagram}
+                  alt="instagram"
+                />
+              </div>
+            </a>
+            <a href="https://www.linkedin.com/company/stackwiser/">
+              <div className="social-container">
+                <img
+                  className="social-icon"
+                  src={socialIcons.linkedin}
+                  alt="linkedin"
+                />
+              </div>
+            </a>
+            <a href="">
+              <div className="social-container">
+                <img
+                  className="social-icon"
+                  src={socialIcons.youtube}
+                  alt="youtube"
+                />
+              </div>
+            </a>
           </div>
           <div className="footer-footer-content">
             <p>Terms & Conditions</p>

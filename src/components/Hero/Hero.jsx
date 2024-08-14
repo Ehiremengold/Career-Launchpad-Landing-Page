@@ -1,6 +1,7 @@
 /* eslint-disable react/prop-types */
 import { useLayoutEffect, useRef } from "react";
 import gsap from "gsap";
+import { Link } from "react-scroll";
 
 const Hero = ({ heroText, heroSubtitle, heroBg }) => {
   const sectionRef = useRef(null);
@@ -28,18 +29,21 @@ const Hero = ({ heroText, heroSubtitle, heroBg }) => {
       Your browser does not support the video tag.
     </video> */}
       <img className="hero-bg-img" src={heroBg} alt="" />
-      <div className="overlay">
-        <div className="hero___content-container">
-          <div className="hero__content">
-            <h1 id="title-1">{heroText}</h1>
-            <p id="subtitle-1">{heroSubtitle}</p>
-            <div className="hero__cta-btns" id="animate-btns">
+      <div className="hero___content-container">
+        <div className="hero__content">
+          <h1 id="title-1">{heroText}</h1>
+          <p id="subtitle-1">{heroSubtitle}</p>
+          <div className="hero__cta-btns" id="animate-btns">
+            <a href="#">
               <button className="get-started">Get Started</button>
+            </a>
+            <Link to="cta__section" smooth={true} duration={500}>
               <button>Learn more</button>
-            </div>
+            </Link>
           </div>
         </div>
       </div>
+      <div className="overlay"></div>
     </section>
   );
 };

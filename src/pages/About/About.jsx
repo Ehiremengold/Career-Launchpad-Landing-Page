@@ -2,6 +2,7 @@ import "./About.css";
 import * as images from "../../../public/assets/about/aboututils.js";
 import StackwisRDifference from "../../components/StackwisRDifference/StackwisRDifference";
 import CareerPaths from "../../components/CareerPaths/CareerPaths";
+import WhyChooseStackwisr from "../../components/WhyChooseStackwisr/WhyChooseStackwisr.jsx";
 
 const About = () => {
   return (
@@ -60,43 +61,7 @@ const About = () => {
 
       <StackwisRDifference heading={"Our Impact"} />
 
-      <section className="wcs">
-        <h1>Why Choose StackwisR</h1>
-        <div className="section__wrapper">
-          <div className="container-1">
-            <img src={images.expertImg} alt="" />
-            <h3>Expert-led Training</h3>
-            <p>
-              At StackwisR, we offer training led by industry veterans and
-              provide real-world projects to ensure you gain the practical
-              skills that employers demand. Our programs include one-on-one
-              expert mentorship and continuous on-the-job support to help you
-              thrive in your new career.
-            </p>
-          </div>
-          <div className="container-2">
-            <img src={images.provenImg} alt="" />
-            <h3>Proven Track Record</h3>
-            <p>
-              Our results speak for themselves with over 2000+ professionals
-              developed, 500+ businesses benefited, and a 4.7+ customer
-              satisfaction score. Our programs boast a 98% job placement rate,
-              ensuring that our delegates not only learn but also secure
-              employment in their desired fields.
-            </p>
-          </div>
-          <div className="container-3">
-            <img src={images.flexibleImg} alt="" />
-            <h3>Flexible Payment and Support</h3>
-            <p>
-              We understand that financial flexibility is crucial, which is why
-              we offer instalment payment plans. Our support doesn’t end at
-              training; we provide continuous guidance and job placement
-              assistance to ensure your success.
-            </p>
-          </div>
-        </div>
-      </section>
+      <WhyChooseStackwisr />
 
       <section className="hwd">
         <h1>How We Differ</h1>
@@ -114,6 +79,31 @@ const About = () => {
             </div>
           </div>
 
+          {/* <div className="differ-container">
+            <div className="differ-icon">
+              <img src={images.returnSvg} alt="" />
+            </div>
+            <div>
+              <h3>Return on Investment</h3>
+              <p>
+                Achieve career progression within months of program completion.
+              </p>
+            </div>
+          </div> */}
+
+          <div className="differ-container">
+            <div className="differ-icon">
+              <img src={images.returnSvg} alt="" />
+            </div>
+            <div>
+              <h3>Return on Investment</h3>
+              <p>
+                Achieve significant career progression and professional growth
+                within months of program completion.
+              </p>
+            </div>
+          </div>
+
           <div className="differ-container">
             <div className="differ-icon">
               <img src={images.holi} alt="" />
@@ -123,18 +113,6 @@ const About = () => {
               <p>
                 We nurture not just technical proficiency, but also essential
                 soft skills and leadership qualities.{" "}
-              </p>
-            </div>
-          </div>
-
-          <div className="differ-container">
-            <div className="differ-icon">
-              <img src={images.returnSvg} alt="" />
-            </div>
-            <div>
-              <h3>Return on Investment</h3>
-              <p>
-                Achieve career progression within months of program completion.
               </p>
             </div>
           </div>
@@ -188,12 +166,13 @@ const About = () => {
           <div className="git-container">
             <img src={images.phone} alt="" />
             <h4>Talk to support</h4>
-            <p>+91 98765 43210</p>
+            <a href="tel:+2348009078235"></a>
+            <p>(+234) 8009078235</p>
           </div>
           <div className="git-container">
             <img src={images.email} alt="" />
             <h4>Send us an Email</h4>
-            <a href="mailto:info@stackwisr.co.uk">info@stackwisr.co.uk</a>
+            <a href="mailto:cx@stackwisr.co.uk">cx@stackwisr.co.uk</a>
           </div>
           <div className="git-container">
             <img src={images.location} alt="" />

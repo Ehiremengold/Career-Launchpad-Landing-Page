@@ -4,6 +4,7 @@ import arrowDown from "/assets/svg/arrow_down_white.svg";
 import "./CareerPath.css";
 import { careers } from "./careers.js";
 import { useRef } from "react";
+import WhyChooseStackwisr from "../../components/WhyChooseStackwisr/WhyChooseStackwisr.jsx";
 
 const CareerPath = () => {
   const careerPathRef = useRef(null);
@@ -49,6 +50,8 @@ const CareerPath = () => {
           ))}
         </div>
       </section>
+
+      <WhyChooseStackwisr />
 
       <section className="keyword-search">
         <input type="text" placeholder="Search Courses" />
