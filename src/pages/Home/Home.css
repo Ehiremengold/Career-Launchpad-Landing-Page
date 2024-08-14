@@ -1,7 +1,7 @@
 .hero-container {
   position: relative;
   width: 100%;
-  height: 88vh;
+  height: 100vh;
   overflow: hidden;
 }
 
@@ -229,7 +229,7 @@
 
 @media (min-width: 1024px) {
   .wwd-d-flex {
-    width: 80%;
+    width: 70%;
   }
 }
 
@@ -374,7 +374,7 @@
 }
 .cta__section_content {
   padding: 5rem 0;
-  width: 60%;
+  width: 80%;
   margin-inline: auto;
   display: flex;
   justify-content: space-between;
