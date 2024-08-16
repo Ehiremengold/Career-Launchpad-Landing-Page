@@ -1,7 +1,7 @@
 import "./CareerDetail.css";
-import detailImg from "/assets/career-img/analyst.jpg";
-import chart from "/assets/career-img/chart.svg";
-import work from "/assets/career-img/work.svg";
+import detailImg from "/src/assets/career-img/analyst.jpg";
+import chart from "/src/assets/career-img/chart.svg";
+import work from "/src/assets/career-img/work.svg";
 import { skills } from "./skills.js";
 import { jobs } from "./jobs.js";
 import { outcomes } from "./outcomes.js";

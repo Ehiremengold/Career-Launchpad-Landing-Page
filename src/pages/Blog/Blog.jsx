@@ -1,8 +1,8 @@
 import { useRef } from "react";
-import blogHero from "/assets/blog/blog-hero.jpg";
-import arrowDown from "/assets/svg/arrow_down_white.svg";
-import dateIcon from "/assets/blog/date.png";
-import userIcon from "/assets/blog/user.png";
+import blogHero from "/src/assets/blog/blog-hero.jpg";
+import arrowDown from "/src/assets/svg/arrow_down_white.svg";
+import dateIcon from "/src/assets/blog/date.png";
+import userIcon from "/src/assets/blog/user.png";
 import "./Blog.css";
 
 const Blog = () => {

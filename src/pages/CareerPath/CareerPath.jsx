@@ -1,6 +1,6 @@
 import Hero from "../../components/Hero/Hero";
 import heroBg from "../../../src/assets/hero-video/hero-career.jpg";
-import arrowDown from "/assets/svg/arrow_down_white.svg";
+import arrowDown from "/src/assets/svg/arrow_down_white.svg";
 import "./CareerPath.css";
 import { careers } from "./careers.js";
 import { useRef } from "react";
