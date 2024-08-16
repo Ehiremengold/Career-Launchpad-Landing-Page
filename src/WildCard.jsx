@@ -1,5 +1,5 @@
 import Lottie from "react-lottie";
-import animationData from "../public/assets/lottie/page-construction.json";
+import animationData from "../src/assets/lottie/page-construction.json";
 
 const Wildcard = () => {
   const defaultOptions = {

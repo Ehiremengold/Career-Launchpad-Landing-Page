@@ -232,8 +232,6 @@
   }
 }
 
-
-
 .difference-card {
   background-color: white;
   border-radius: 5px;
@@ -255,7 +253,7 @@
 .difference-card p {
   color: var(--medium-gray);
   text-align: left;
-  font-size: clamp(13px, .9vw, 20px);
+  font-size: clamp(13px, 0.9vw, 20px);
 }
 
 .alumni {
@@ -363,7 +361,7 @@
 .cta__section {
   padding: 7rem 0;
   position: relative;
-  background: url("../../../public/assets/svg/ctaAngled.svg") no-repeat center
+  background: url("../../../src/assets/svg/ctaAngled.svg") no-repeat center
     center;
   background-size: cover;
 }

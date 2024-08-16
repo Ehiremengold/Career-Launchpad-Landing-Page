@@ -1,7 +1,7 @@
 import Lottie from "react-lottie";
-import certified from "../../../public/assets/lottie/certified.json";
-import gotJob from "../../../public/assets/lottie/got-job.json";
-import fourStars from "../../../public/assets/lottie/four-star.json";
+import certified from "../../../src/assets/lottie/certified.json";
+import gotJob from "../../../src/assets/lottie/got-job.json";
+import fourStars from "../../../src/assets/lottie/four-star.json";
 
 const defaultOptions = (animationData) => ({
   loop: true,

@@ -1,5 +1,5 @@
 import "./About.css";
-import * as images from "../../../public/assets/about/aboututils.js";
+import * as images from "../../../src/assets/about/aboututils.js";
 import StackwisRDifference from "../../components/StackwisRDifference/StackwisRDifference";
 import CareerPaths from "../../components/CareerPaths/CareerPaths";
 import WhyChooseStackwisr from "../../components/WhyChooseStackwisr/WhyChooseStackwisr.jsx";
@@ -66,7 +66,6 @@ const About = () => {
       <section className="hwd">
         <h1>How We Differ</h1>
         <div className="section__wrapper">
-
           <div className="differ-container">
             <div className="differ-icon">
               <img src={images.proofed} alt="" />
@@ -105,7 +104,6 @@ const About = () => {
               </p>
             </div>
           </div>
-          
         </div>
       </section>
 

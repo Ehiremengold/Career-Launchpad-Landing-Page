@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { testimonials } from "./testimonialData.js";
 import "aos/dist/aos.css";
-import navRightArrow from "../../../public/assets/svg/nav-right-arrow.svg";
-import navLeftArrow from "../../../public/assets/svg/nav-left-arrow.svg";
+import navRightArrow from "../../../src/assets/svg/nav-right-arrow.svg";
+import navLeftArrow from "../../../src/assets/svg/nav-left-arrow.svg";
 
 const Alumni = () => {
   const [currentIndex, setCurrentIndex] = useState(0);

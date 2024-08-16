@@ -99,7 +99,7 @@
   border-radius: 10px;
   padding: 1rem 3rem;
   font-family: "Poppins";
-  background: url("../../../public/assets/svg/search.svg") no-repeat 10px center;
+  background: url("../../../src/assets/svg/search.svg") no-repeat 10px center;
   background-size: clamp(20px, 1.5vw, 30px);
 }
 

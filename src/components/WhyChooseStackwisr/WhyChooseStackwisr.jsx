@@ -1,4 +1,4 @@
-import * as images from "../../../public/assets/about/aboututils.js";
+import * as images from "../../../src/assets/about/aboututils.js";
 
 const WhyChooseStackwisr = () => {
   return (

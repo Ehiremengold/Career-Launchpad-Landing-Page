@@ -1,5 +1,5 @@
 import Hero from "../../components/Hero/Hero";
-import heroBg from "../../../public/assets/hero-video/hero-career.jpg";
+import heroBg from "../../../src/assets/hero-video/hero-career.jpg";
 import arrowDown from "/assets/svg/arrow_down_white.svg";
 import "./CareerPath.css";
 import { careers } from "./careers.js";

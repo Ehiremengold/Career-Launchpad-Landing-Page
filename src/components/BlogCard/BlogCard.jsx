@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 import "./BlogSection.css";
-import dateIcon from "../../../public/assets/blog/date.png";
-import userIcon from "../../../public/assets/blog/user.png";
+import dateIcon from "../../../src/assets/blog/date.png";
+import userIcon from "../../../src/assets/blog/user.png";
 
 const BlogCard = ({ title, author, date, image }) => {
   return (

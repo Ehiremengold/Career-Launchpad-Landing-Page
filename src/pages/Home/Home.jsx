@@ -1,6 +1,6 @@
 import "./Home.css";
 import { useEffect } from "react";
-// import videoFile from "../../../public/assets/hero-video/hero.mp4";
+// import videoFile from "../../../src/assets/hero-video/hero.mp4";
 import "aos/dist/aos.css";
 import BlogSection from "../../components/BlogCard/BlogSection.jsx";
 import Alumni from "../../components/Alumni/Alumni.jsx";
@@ -8,7 +8,7 @@ import { Helmet } from "react-helmet";
 import CareerPaths from "../../components/CareerPaths/CareerPaths.jsx";
 import StackwisRDifference from "../../components/StackwisRDifference/StackwisRDifference.jsx";
 import CTASection from "../../components/CTA/CTASection.jsx";
-import heroBg from "../../../public/assets/hero-video/hero-bg.jpg";
+import heroBg from "../../../src/assets/hero-video/hero-bg.jpg";
 import Hero from "../../components/Hero/Hero.jsx";
 
 const Home = () => {

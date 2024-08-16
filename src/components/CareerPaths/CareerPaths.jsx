@@ -1,4 +1,4 @@
-import morePaths from "../../../public/assets/icons/right-arrow.png";
+import morePaths from "../../../src/assets/icons/right-arrow.png";
 const CareerPaths = ({ isHome }) => {
   return (
     <section

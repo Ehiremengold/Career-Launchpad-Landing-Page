@@ -1,8 +1,8 @@
 import "./NavBar.css";
-import logo from "../../../public/assets/logo/logo.png";
-import * as socialIcons from "../../../public/assets/social-media-icons/utils.js";
-import menubar from "../../../public/assets/svg/menu.svg";
-import closeMenuBar from "../../../public/assets/svg/menu-close.png";
+import logo from "../../../src/assets/logo/logo.png";
+import * as socialIcons from "../../../src/assets/social-media-icons/utils.js";
+import menubar from "../../../src/assets/svg/menu.svg";
+import closeMenuBar from "../../../src/assets/svg/menu-close.png";
 import { useState, useEffect } from "react";
 
 const NavBar = () => {

@@ -1,4 +1,4 @@
-import * as testimonialImages from "../../../public/assets/testimonial/util.js";
+import * as testimonialImages from "../../../src/assets/testimonial/util.js";
 
 const testimonials = [
   {

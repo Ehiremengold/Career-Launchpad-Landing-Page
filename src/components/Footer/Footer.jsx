@@ -1,6 +1,6 @@
 import "./Footer.css";
 
-import * as socialIcons from "../../../public/assets/social-media-icons/utils.js";
+import * as socialIcons from "../../../src/assets/social-media-icons/utils.js";
 
 const Footer = () => {
   return (
@@ -71,7 +71,7 @@ const Footer = () => {
 
       <div className="lower-footer">
         <div className="d-flex">
-        <div className="socials">
+          <div className="socials">
             <a href="https://www.facebook.com/StackwisR">
               <div className="social-container">
                 <img
