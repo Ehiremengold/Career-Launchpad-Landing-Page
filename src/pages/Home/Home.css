@@ -71,7 +71,7 @@
 }
 
 .hero__content h1 {
-  font-size: clamp(20px, 3vw, 50px);
+  font-size: clamp(20px, 3vw, 70px);
 }
 .hero__content p {
   font-size: clamp(18px, 2vw, 25px);
@@ -120,8 +120,8 @@
     right: 3rem;
     top: 60%;
     transform: translateY(0=-50%, 50%);
-    height: 60px;
-    width: 60px;
+    height: 50px;
+    width: 50px;
     background-color: #dae1ef;
     clip-path: circle();
     display: flex;
@@ -169,7 +169,7 @@
   /* margin: 3rem 0; */
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: top;
 }
 
 .explore-path__card {
@@ -219,7 +219,7 @@
 .wwd-d-flex {
   display: grid;
   grid-template-columns: 1fr;
-  width: 80%;
+  width: 75%;
   align-items: stretch;
   flex-wrap: wrap;
   margin-top: 4rem;
@@ -237,15 +237,8 @@
 .difference-card {
   background-color: white;
   border-radius: 5px;
-  padding: 1.5rem;
+  padding: 1rem;
   box-shadow: 2px 3px 5px 5px rgba(96, 96, 96, 0.4);
-  /* flex: 1 1 0;  */
-  /* aspect-ratio: 1 / 1;  */
-  /* display: flex; */
-  /* flex-direction: column; */
-  /* justify-content: center; */
-  /* align-items: center; */
-  /* overflow: hidden; Prevents content overflow */
 }
 @media (max-width: 768px) {
   .wwd-d-flex {
@@ -262,7 +255,7 @@
 .difference-card p {
   color: var(--medium-gray);
   text-align: left;
-  font-size: clamp(15px, 1vw, 30px);
+  font-size: clamp(13px, .9vw, 20px);
 }
 
 .alumni {
@@ -290,7 +283,7 @@
 
 @media (min-width: 1024px) {
   .testimonial-section {
-    width: 90%;
+    width: 70%;
   }
 }
 .testimonial-container {

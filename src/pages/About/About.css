@@ -59,34 +59,45 @@
   }
 }
 
+.hwd .section__wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 1024px) {
+  .hwd .section__wrapper {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
 .section__wrapper {
   display: flex;
-  align-items: center;
+  align-items: start;
   justify-content: space-evenly;
   margin-inline: auto;
   width: 90%;
   flex-wrap: wrap;
-  gap: 1.35rem;
+  gap: 2.5rem;
   margin-top: 4rem;
   /* border: 1px solid red; */
 }
+
+.wcs .section__wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+@media (min-width: 1024px) {
+  .wcs .section__wrapper {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
 .container-1,
 .container-2,
 .container-3 {
   text-align: center;
 }
-
-@media (min-width: 1024px) {
-  .container-1,
-  .container-2 {
-    margin-right: 2rem;
-    align-self: center;
-  }
-  .container-3{
-    align-self: center;
-  }
-}
-
 .container-1 p,
 .container-2 p,
 .container-3 p {
@@ -120,7 +131,7 @@
 
 @media (min-width: 1024px) {
   .section__wrapper {
-    width: 70%;
+    width: 80%;
   }
 
   .wwa__description,
@@ -166,8 +177,12 @@
 .git__description p {
   text-align: justify;
   color: var(--medium-gray);
-  font-size: clamp(17px, 1vw, 36px);
+  font-size: clamp(15px, 1vw, 32px);
   /* margin-bottom: 1rem; */
+}
+.wwa .section__wrapper, 
+.wwd .section__wrapper{
+  align-items: center;
 }
 
 .wwa__img,
@@ -182,7 +197,9 @@
 
 .differ-container {
   display: flex;
+  flex-direction: column;
   align-items: center;
+
   /* flex: 1; */
   gap: 1.5rem;
 }
@@ -198,10 +215,22 @@
 }
 .differ-container h3 {
   color: var(--body-font-color);
+  white-space: nowrap;
+  text-align: center;
+}
+
+.oa .section__wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 1024px) {
+  .oa .section__wrapper {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 .oa-container {
-  /* flex: 1; */
   border: 1px solid rgba(93, 93, 93, 0.2);
   border-radius: 5px;
   padding: 1rem;
@@ -224,7 +253,7 @@
 }
 
 .git-container img {
-  width: 15%;
+  width: 12%;
 }
 .git-container h4 {
   color: var(--body-font-color);

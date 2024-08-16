@@ -20,7 +20,7 @@ const StackwisRDifference = ({ heading, isHomePage }) => {
         <div className="difference-card">
           <Lottie
             options={defaultOptions(certified)}
-            height={"80%"}
+            height={"50%"}
             width={"50%"}
           />
           <h1>2000+</h1>
@@ -29,8 +29,8 @@ const StackwisRDifference = ({ heading, isHomePage }) => {
         <div className="difference-card">
           <Lottie
             options={defaultOptions(gotJob)}
-            height={"80%"}
-            width={"60%"}
+            height={"50%"}
+            width={"50%"}
           />
           <h1>98%</h1>
           <p>
@@ -41,7 +41,7 @@ const StackwisRDifference = ({ heading, isHomePage }) => {
           <Lottie
             options={defaultOptions(fourStars)}
             height={"50%"}
-            width={"100%"}
+            width={"50%"}
           />
           <h1>4.7+</h1>
           <p>Service Excellence Score</p>

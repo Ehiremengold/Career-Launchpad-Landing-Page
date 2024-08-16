@@ -66,6 +66,7 @@ const About = () => {
       <section className="hwd">
         <h1>How We Differ</h1>
         <div className="section__wrapper">
+
           <div className="differ-container">
             <div className="differ-icon">
               <img src={images.proofed} alt="" />
@@ -78,18 +79,6 @@ const About = () => {
               </p>
             </div>
           </div>
-
-          {/* <div className="differ-container">
-            <div className="differ-icon">
-              <img src={images.returnSvg} alt="" />
-            </div>
-            <div>
-              <h3>Return on Investment</h3>
-              <p>
-                Achieve career progression within months of program completion.
-              </p>
-            </div>
-          </div> */}
 
           <div className="differ-container">
             <div className="differ-icon">
@@ -116,6 +105,7 @@ const About = () => {
               </p>
             </div>
           </div>
+          
         </div>
       </section>
 
@@ -166,8 +156,12 @@ const About = () => {
           <div className="git-container">
             <img src={images.phone} alt="" />
             <h4>Talk to support</h4>
-            <a href="tel:+2348009078235"></a>
-            <p>(+234) 8009078235</p>
+            <a href="tel:+2348009078235">
+              <p>NG: 08009078235</p>
+            </a>
+            <a href="tel: 02038180993">
+              <p>UK: 02038180993</p>
+            </a>
           </div>
           <div className="git-container">
             <img src={images.email} alt="" />
