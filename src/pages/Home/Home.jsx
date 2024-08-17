@@ -48,7 +48,7 @@ const Home = () => {
         isHomePage={true}
       />
 
-      <Alumni />
+      <Alumni isHome={true} />
 
       <BlogSection />
       <CTASection />

@@ -1,70 +1,166 @@
 .widget {
-  width: 80vw;
-  max-width: 600px;
+  position: relative;
   padding: 1rem;
   margin: 2rem auto;
   border-radius: 1rem;
   background-color: #fff;
-  box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.025);
+  box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.1);
+  min-height: 500px;
+  /* width: 85vw; */
+  /* max-width: 950px; */
+}
+@media (min-width: 900px) {
+  .widget {
+    width: 60vw;
+  }
 }
 
 .tabs {
-  position: relative;
   display: flex;
-  height: 3.5rem;
+  position: relative;
+  justify-content: space-around;
   border-bottom: 1px solid #e9ebec;
 }
 
-.tabs input {
-  display: none;
-}
-
-.tabs label {
+.tab {
+  white-space: nowrap;
   flex: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 0.9375rem;
+  text-align: center;
+  padding: 1rem;
   font-weight: 600;
-  color: #dddddf;
   cursor: pointer;
-  transition: color 0.5s ease-in-out;
-  position: relative;
+  transition: color 0.3s ease;
+  color: #dddddf;
+  z-index: 1; /* Ensure tabs are above the indicator */
 }
 
-.tabs input:checked + label {
-  color: #101010;
+/* Removed the active::after pseudo-element and added a new active-indicator div */
+.tab.active {
+  color: var(--body-font-color);
 }
 
-.tabs label::after {
-  content: "";
+.active-indicator {
   position: absolute;
-  bottom: -1px;
+  bottom: 0;
   left: 0;
-  width: 100%;
   height: 3px;
-  background-color: transparent;
-  transition: background-color 0.5s ease-in-out;
+  background-color: var(--body-font-color);
+  transition: all 0.3s ease-in-out;
 }
 
-.tabs input:checked + label::after {
-  background-color: #101010;
+@media (max-width: 425px) {
+  .active-indicator {
+    background-color: transparent;
+  }
+}
+
+/* Adjust the width of the indicator based on the number of tabs */
+.active-indicator {
+  width: 33.33%;
+}
+
+/* Apply transform to move the indicator based on the active tab */
+.tab.active:nth-child(1) ~ .active-indicator {
+  transform: translateX(0%);
+}
+
+.tab.active:nth-child(2) ~ .active-indicator {
+  transform: translateX(100%);
+}
+
+.tab.active:nth-child(3) ~ .active-indicator {
+  transform: translateX(200%);
 }
 
 .tab-content {
   padding: 1rem;
-  transition: opacity 0.3s ease-in-out;
 }
 
-.tab-content > div {
+.tab-pane {
   display: none;
   opacity: 0;
+}
+.tab-pane h2 {
+  font-size: clamp(16px, 1vw, 35px);
+  margin-top: 3rem;
+}
+
+.tab-pane.testimonials h2{
+  font-size: clamp(16px, 1.5vw, 35px);
+}
+.tab-pane.fade-in {
+  display: block;
+  opacity: 1;
   transition: opacity 0.3s ease-in-out;
 }
 
-#overview:checked ~ .tab-content .tab-content-1,
-#experience:checked ~ .tab-content .tab-content-2,
-#awards:checked ~ .tab-content .tab-content-3 {
-  display: block;
-  opacity: 1;
+.what-you-learn {
+  position: relative;
+  border-radius: 3px;
+  /* border: 1px solid red; */
+  height: 70px;
+  padding: 1rem;
+  margin-top: 10px;
+  overflow: hidden;
+  transition: height 0.4s ease-in-out;
+  box-shadow: inset 0 2px 5px 0 rgba(96, 96, 96, 0.1);
+}
+
+.what-you-learn.show {
+  height: unset;
+}
+
+@media (min-width: 800px) {
+  .what-you-learn {
+    width: 80%;
+    height: 80px;
+  }
+}
+.checklist {
+  display: flex;
+  align-items: top;
+  gap: 0.5rem;
+}
+.show-more-action {
+  padding: 0.3rem 1.3rem;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  color: #2984e4;
+  border-radius: 0.5rem;
+  transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.show-more-action:active {
+  transform: scale(0.8);
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.show-more-action h4 {
+  cursor: pointer;
+  font-weight: 500;
+  font-size: clamp(14px, 0.8vw, 25px);
+}
+
+.skills,
+.jobs {
+  margin-top: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 0.75rem;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+@media (max-width: 500px) {
+  .skills,
+  .jobs {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.item-container {
+  padding: 1rem;
+  border-radius: 6px;
+  white-space: nowrap;
+  background-color: rgba(96, 96, 96, 0.1);
 }

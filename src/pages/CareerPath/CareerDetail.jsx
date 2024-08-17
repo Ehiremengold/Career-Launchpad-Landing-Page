@@ -41,7 +41,7 @@ const CareerDetail = () => {
           </div>
         </div>
       </section>
-
+      
       <Tab />
       {/* wywl - what you will learn ;) */}
       {/* <section className="wywl">

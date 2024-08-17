@@ -3,7 +3,7 @@ import { testimonials } from "./testimonialData.js";
 import navRightArrow from "../../../src/assets/svg/nav-right-arrow.svg";
 import navLeftArrow from "../../../src/assets/svg/nav-left-arrow.svg";
 
-const Alumni = () => {
+const Alumni = ({ isHome }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isTransitioning, setIsTransitioning] = useState(false);
 
@@ -28,7 +28,7 @@ const Alumni = () => {
   };
 
   return (
-    <section className="alumni hidden" id="our-success">
+    <section className={`alumni ${isHome ? "hidden" : ""}`} id="our-success">
       <div className="testimonial-section">
         <h2>Real stories, Real success</h2>
         <div className="testimonial-container">
@@ -54,7 +54,9 @@ const Alumni = () => {
             <div className="testimonial-text">
               <h3>{testimonials[currentIndex].name}</h3>
               <p>
-                <strong>Company: {testimonials[currentIndex].company}</strong>
+                <strong>
+                  Company: {testimonials[currentIndex].job_description}
+                </strong>
               </p>
               <p>{testimonials[currentIndex].feedback}</p>
             </div>

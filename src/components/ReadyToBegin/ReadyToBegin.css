@@ -1,0 +1,23 @@
+.ready-to-begin {
+  text-align: center;
+  margin-top: 5rem;
+}
+
+.ready-to-begin h1 {
+  font-size: clamp(23px, 2.35vw, 50px);
+  color: var(--body-font-color);
+}
+.ready-to-begin p {
+  font-size: clamp(16px, 0.8vw, 26px);
+  margin-bottom: 1rem;
+}
+
+.ready-to-begin button {
+  background-color: #1c7ce2;
+  border: none;
+  color: white;
+  font-family: "Poppins";
+  padding: 1rem 2.5rem;
+  font-weight: 500;
+  border-radius: 5px;
+}
