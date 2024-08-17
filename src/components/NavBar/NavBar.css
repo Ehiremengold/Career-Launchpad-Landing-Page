@@ -118,6 +118,7 @@ nav ul li {
   color: var(--primary-font-color);
   text-decoration: none;
   list-style: none;
+  white-space: nowrap;
 }
 
 .about__socials {
@@ -126,6 +127,7 @@ nav ul li {
 }
 
 .about__socials p {
+  white-space: nowrap;
   margin-right: 2rem;
 }
 .about__socials .socials {

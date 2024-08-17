@@ -2,46 +2,53 @@ import "./CareerDetail.css";
 import detailImg from "/src/assets/career-img/analyst.jpg";
 import chart from "/src/assets/career-img/chart.svg";
 import work from "/src/assets/career-img/work.svg";
+import rating from "/src/assets/career-detail-icons/rating.svg";
+import language from "/src/assets/career-detail-icons/language.svg";
 import { skills } from "./skills.js";
 import { jobs } from "./jobs.js";
 import { outcomes } from "./outcomes.js";
+import Tab from "../../components/Tab/Tab.jsx";
 
 const CareerDetail = () => {
   return (
     <>
       <section className="course-detail">
-        <div className="detail_wrapper">
-          <div className="course-detail__description">
-            <h2>IT BUSINESS ANALYST</h2>
+        <div className="course-detail__wrapper">
+          <div className="course_description">
+            <h1>IT Business Analyst</h1>
             <p>
-              StackwisR IT Business Analyst programme is designed with high
-              performance, skill transferability and rapid career progression in
-              mind. On completion, candidates are expected to be one of the most
-              equipped entry to mid-level BA candidates on the jobs markets.
+              The IT Business Analyst program is designed for high performance,
+              skill transferability, and rapid career progression.
             </p>
+
             <p>
-              IT Business Analyst helps organisations build, own, improve and
-              manage products, implement best practices and user experience. The
-              BA will own the development lifecycle of systems and processes,
-              manage stakeholders, operational process, carry out research and
-              solve complex problems using Data, frameworks and IT tools.
+              Graduates emerge as top-tier entry to mid-level BAs, fully
+              equipped to excel in the job market.
             </p>
           </div>
-          <div className="course-detail__image">
-            <img src={detailImg} alt="" />
+          <div className="course-detail-action-btns">
+            <div className="rating">
+              <img src={rating} alt="" />
+              <h2>4.5</h2>
+            </div>
+            <div className="language">
+              <img src={language} alt="" />
+              <h2>English</h2>
+            </div>
+            <div className="enroll-action-btn">
+              <button>Enroll Now</button>
+            </div>
           </div>
-        </div>
-        <div className="action-btns">
-          <button className="enroll-btn">ENROLL NOW</button>
-          <button className="request-btn">REQUEST SYLLABUS</button>
         </div>
       </section>
+
+      <Tab />
       {/* wywl - what you will learn ;) */}
-      <section className="wywl">
+      {/* <section className="wywl">
         <h2>What You&apos;ll Learn</h2>
         <div className="wywl-wrapper">
           <ul>
-            {/* {console.log(typeof outcomes["results"])} */}
+           
             {outcomes["results"].map((result, index) => (
               <li key={index}>{result}</li>
             ))}
@@ -51,7 +58,7 @@ const CareerDetail = () => {
       <div className="blue-line"></div>
       <section className="gains">
         <div className="section_wrapper">
-          {/* div 1 */}
+
           <div className="sywa">
             <div className="icon-box">
               <img src={chart} alt="" />
@@ -66,7 +73,6 @@ const CareerDetail = () => {
             </div>
           </div>
 
-          {/* div 2 */}
           <div className="jrycaf">
             <div className="icon-box">
               <img src={work} alt="" />
@@ -92,7 +98,7 @@ const CareerDetail = () => {
           </p>
           <button className="get-started-btn">Get Started</button>
         </div>
-      </section>
+      </section> */}
     </>
   );
 };

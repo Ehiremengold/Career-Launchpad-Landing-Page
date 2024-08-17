@@ -17,10 +17,10 @@ export const blogPosts = [
     date: "6th August, 2024",
     image: "/src/assets/blog/blog-img-3.jpg",
   },
-  {
-    title: "Women in Tech: High-Paying Skills and Careers to Pursue in 2024",
-    author: "Seyi Ayinde",
-    date: "3rd August, 2024",
-    image: "/src/assets/blog/blog-img-4.jpg",
-  },
+  // {
+  //   title: "Women in Tech: High-Paying Skills and Careers to Pursue in 2024",
+  //   author: "Seyi Ayinde",
+  //   date: "3rd August, 2024",
+  //   image: "/src/assets/blog/blog-img-4.jpg",
+  // },
 ];
