@@ -41,7 +41,7 @@ const StackwisRDifference = ({ heading, isHomePage }) => {
           <Lottie
             options={defaultOptions(fourStars)}
             height={"50%"}
-            width={"35%"}
+            width={window.innerWidth < 768 ? "60%" : "40%"}
           />
           <h1>4.7+</h1>
           <p>Service Excellence Score</p>

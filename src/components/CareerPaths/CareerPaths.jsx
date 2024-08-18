@@ -1,10 +1,49 @@
+import axios from "axios";
+import { useEffect, useState } from "react";
 import morePaths from "../../../src/assets/icons/right-arrow.png";
+import Loading from "../LoadingSpinner/Loading";
+
 const CareerPaths = ({ isHome }) => {
+  const truncateText = (text, limit) => {
+    return text.length > limit ? text.substring(0, limit) + "..." : text;
+  };
+
+  const [isLoading, setIsLoading] = useState(true);
+  const [isError, setIsError] = useState(false);
+
+  const [data, setData] = useState(null);
+
+  useEffect(() => {
+    const rootUrl = import.meta.env.VITE_API_ROOT;
+
+    const fetchPaths = async () => {
+      try {
+        const response = await axios.get(`${rootUrl}careerpaths/`);
+        setData(response.data);
+        setIsLoading(false);
+        console.log(data);
+      } catch (error) {
+        setIsError(true);
+        setIsLoading(false);
+        console.log(error);
+      }
+    };
+    fetchPaths();
+  }, []);
+
+  if (isLoading) {
+    <div className="wrapper">
+      <Loading />
+    </div>;
+    return;
+  }
+
+  if (isError) {
+    return <h4>Error Loading Career Paths</h4>;
+  }
+
   return (
-    <section
-      className={`explore-paths ${isHome ? "hidden" : ""}`}
-      id="career-paths"
-    >
+    <section className="explore-paths" id="career-paths">
       <div className="wrapper">
         <div className="explore-header">
           <h2>Explore Our Career Paths</h2>
@@ -14,33 +53,16 @@ const CareerPaths = ({ isHome }) => {
           </p>
         </div>
         <div className="explore-paths__cards">
-          <div className="explore-path__card card">
-            <h3>Data Analyst</h3>
-            <p>
-              Master the art of data analysis and drive business decisions with
-              our comprehensive training. Gain hands-on experience with
-              industry-standard tools and techniques
-            </p>
-            <a href="">Learn more</a>
-          </div>
-          <div className="explore-path__card card">
-            <h3>Business Analyst</h3>
-            <p>
-              Become a key player in business strategy and operations. Learn to
-              bridge the gap between IT and business with our export-led
-              Business Analyst program.
-            </p>
-            <a href="">Learn more</a>
-          </div>
-          <div className="explore-path__card card">
-            <h3>CyberSecurity</h3>
-            <p>
-              Protect and secure digital environments. Our Cybersecurity program
-              equips you with the skills to defend against cyber threats and
-              ensure data integrity
-            </p>
-            <a href="">Learn more</a>
-          </div>
+          {data.map((careerpath) => {
+            const { id, career_name, description } = careerpath;
+            return (
+              <div key={id} className="explore-path__card card">
+                <h3>{career_name}</h3>
+                <p>{truncateText(description, 151)}</p>
+                <a href="">Learn more</a>
+              </div>
+            );
+          })}
         </div>
       </div>
       <a href="/explore-paths">
