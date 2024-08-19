@@ -117,7 +117,7 @@
 @media (min-width: 1024px) {
   .more-paths {
     position: absolute;
-    right: 3rem;
+    right: 5rem;
     top: 60%;
     transform: translateY(0=-50%, 50%);
     height: 50px;
@@ -146,7 +146,7 @@
 
 @media (min-width: 1024px) {
   .wrapper {
-    width: 85%;
+    width: 75%;
   }
 }
 @media (max-width: 768px) {

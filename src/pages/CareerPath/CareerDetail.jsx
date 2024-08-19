@@ -1,39 +1,70 @@
+import { useParams } from "react-router-dom";
+import { useEffect, useState } from "react";
+import axios from "axios";
 import "./CareerDetail.css";
-import detailImg from "/src/assets/career-img/analyst.jpg";
-import chart from "/src/assets/career-img/chart.svg";
-import work from "/src/assets/career-img/work.svg";
 import rating from "/src/assets/career-detail-icons/rating.svg";
 import language from "/src/assets/career-detail-icons/language.svg";
-import { skills } from "./skills.js";
-import { jobs } from "./jobs.js";
-import { outcomes } from "./outcomes.js";
 import Tab from "../../components/Tab/Tab.jsx";
+import Loading from "../../components/LoadingSpinner/Loading.jsx";
 
 const CareerDetail = () => {
+  const { slug } = useParams(); // Retrieve slug from URL
+  const [careerDetail, setCareerDetail] = useState(null);
+  const [isLoading, setIsLoading] = useState(true);
+  const [isError, setIsError] = useState(false);
+
+  useEffect(() => {
+    const rootUrl = import.meta.env.VITE_API_ROOT;
+
+    const fetchCareerDetail = async () => {
+      try {
+        const response = await axios.get(`${rootUrl}careerpaths/${slug}/`);
+        setCareerDetail(response.data);
+        setIsLoading(false);
+      } catch (error) {
+        setIsError(true);
+        setIsLoading(false);
+      }
+    };
+
+    fetchCareerDetail();
+  }, []);
+
+  if (isLoading) {
+    return <Loading />;
+  }
+
+  if (isError) {
+    return <div>Error loading career detail.</div>;
+  }
+
+  if (!careerDetail) {
+    return <div>No career detail found.</div>;
+  }
+
   return (
     <>
-      <section className="course-detail">
+      <section
+        className="course-detail"
+        style={{
+          "--background-image": `url(${careerDetail.img_display})`,
+        }}
+      >
         <div className="course-detail__wrapper">
           <div className="course_description">
-            <h1>IT Business Analyst</h1>
-            <p>
-              The IT Business Analyst program is designed for high performance,
-              skill transferability, and rapid career progression.
-            </p>
-
-            <p>
-              Graduates emerge as top-tier entry to mid-level BAs, fully
-              equipped to excel in the job market.
-            </p>
+            <h1>{careerDetail.career_name}</h1>
+            <p>{careerDetail.description}</p>
+            <p>{careerDetail.additional_info}</p>{" "}
+            {/* Update with actual fields */}
           </div>
           <div className="course-detail-action-btns">
             <div className="rating">
               <img src={rating} alt="" />
-              <h2>4.5</h2>
+              <h2>{careerDetail.rating}</h2>
             </div>
             <div className="language">
               <img src={language} alt="" />
-              <h2>English</h2>
+              <h2>{careerDetail.language}</h2>
             </div>
             <div className="enroll-action-btn">
               <button>Enroll Now</button>
@@ -41,65 +72,15 @@ const CareerDetail = () => {
           </div>
         </div>
       </section>
-      
-      <Tab />
-      {/* wywl - what you will learn ;) */}
-      {/* <section className="wywl">
-        <h2>What You&apos;ll Learn</h2>
-        <div className="wywl-wrapper">
-          <ul>
-           
-            {outcomes["results"].map((result, index) => (
-              <li key={index}>{result}</li>
-            ))}
-          </ul>
-        </div>
-      </section>
-      <div className="blue-line"></div>
-      <section className="gains">
-        <div className="section_wrapper">
 
-          <div className="sywa">
-            <div className="icon-box">
-              <img src={chart} alt="" />
-            </div>
-            <div className="sywa__content">
-              <h4>Skills You Will Acquire</h4>
-              <ul>
-                {skills["results"].map((result, index) => (
-                  <li key={index}>{result}</li>
-                ))}
-              </ul>
-            </div>
-          </div>
-
-          <div className="jrycaf">
-            <div className="icon-box">
-              <img src={work} alt="" />
-            </div>
-            <div className="jrycaf__content">
-              <h4>Job Roles You Can Apply For</h4>
-              <ul>
-                {jobs["results"].map((result, index) => (
-                  <li key={index}>{result}</li>
-                ))}
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="get-started">
-        <div className="get-started__wrapper">
-          <h2>Ready to Get Started?</h2>
-          <p>
-            Click on the &quot;Get started&quot; button to fill out the form,
-            and one of our career experts will contact you shortly.
-          </p>
-          <button className="get-started-btn">Get Started</button>
-        </div>
-      </section> */}
+      <Tab
+        whatYouWillLearn={careerDetail.what_you_will_learn_list}
+        skills={careerDetail.skills_you_will_gain}
+        potentialJobs={careerDetail.potential_jobs}
+      />
+      <div className="overlay show"></div>
     </>
   );
 };
+
 export default CareerDetail;

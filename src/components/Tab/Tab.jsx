@@ -1,11 +1,12 @@
-import { useState } from "react";
+import { useState, } from "react";
+import { useParams } from "react-router-dom";
 import checkIcon from "../../../src/assets/career-detail-icons/check.svg";
 import WhyChooseStackwisr from "../WhyChooseStackwisr/WhyChooseStackwisr.jsx";
 import Alumni from "../Alumni/Alumni.jsx";
 import ReadyToBegin from "../ReadyToBegin/ReadyToBegin.jsx";
 import "./Tab.css";
 
-const Tab = () => {
+const Tab = ({whatYouWillLearn, skills, potentialJobs}) => {
   const [activeTab, setActiveTab] = useState("about");
   const [visible, setVisible] = useState(false);
 
@@ -16,29 +17,6 @@ const Tab = () => {
   const showMore = () => {
     setVisible(!visible);
   };
-
-  const whatYouWillLearn = [
-    "Master Business Analysis through the ECBA framework.",
-    "Understand Agile, SCRUM, and Kanban for dynamic management.",
-    "Learn BPM techniques for effective analysis.",
-    "Acquire skills in Project & Change Management (PMP/ITIL).",
-  ];
-
-  const skills = [
-    "Process Modelling",
-    "Agile Methodologies",
-    "Stakeholder Engagement",
-    "Data Visualization",
-    "Client Management",
-  ];
-
-  const potentialJobs = [
-    "Business Analyst",
-    "Data Analyst",
-    "Enterprise Analyst",
-    "Data Scientist",
-    "Business Architect",
-  ];
 
   return (
     <div className="widget">

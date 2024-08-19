@@ -2,12 +2,9 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import morePaths from "../../../src/assets/icons/right-arrow.png";
 import Loading from "../LoadingSpinner/Loading";
+import { truncateText } from "../../../utils.js";
 
 const CareerPaths = ({ isHome }) => {
-  const truncateText = (text, limit) => {
-    return text.length > limit ? text.substring(0, limit) + "..." : text;
-  };
-
   const [isLoading, setIsLoading] = useState(true);
   const [isError, setIsError] = useState(false);
 
@@ -39,7 +36,11 @@ const CareerPaths = ({ isHome }) => {
   }
 
   if (isError) {
-    return <h4>Error Loading Career Paths</h4>;
+    return (
+      <div className="wrapper">
+        <h4>Error Loading Career Paths</h4>
+      </div>
+    );
   }
 
   return (

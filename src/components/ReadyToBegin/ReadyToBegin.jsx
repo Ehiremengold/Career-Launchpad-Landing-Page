@@ -1,4 +1,10 @@
 import "./ReadyToBegin.css";
+
+const showModal = () => {
+  console.log('show modal');
+  
+}
+
 const ReadyToBegin = () => {
   return (
     <div className="ready-to-begin">
@@ -7,7 +13,7 @@ const ReadyToBegin = () => {
         Click on &#34;Get Started&#34; to fill out the form, and one of our
         career experts will contact you shortly.
       </p>
-      <button>Get Started</button>
+      <button onClick={showModal}>Get Started</button>
     </div>
   );
 };

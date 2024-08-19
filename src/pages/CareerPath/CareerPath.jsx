@@ -2,16 +2,55 @@ import Hero from "../../components/Hero/Hero";
 import heroBg from "../../../src/assets/hero-video/hero-career.jpg";
 import arrowDown from "/src/assets/svg/arrow_down_white.svg";
 import "./CareerPath.css";
-import { careers } from "./careers.js";
-import { useRef } from "react";
+import { useRef, useEffect, useState } from "react";
 import WhyChooseStackwisr from "../../components/WhyChooseStackwisr/WhyChooseStackwisr.jsx";
+import axios from "axios";
+import Loading from "../../components/LoadingSpinner/Loading.jsx";
+import { Link } from "react-router-dom";
 
 const CareerPath = () => {
+  const [isLoading, setIsLoading] = useState(true);
+  const [isError, setIsError] = useState(false);
+
+  const [data, setData] = useState(null);
+
   const careerPathRef = useRef(null);
 
   const scrollToSection = () => {
     careerPathRef.current.scrollIntoView({ behavior: "smooth" });
   };
+
+  useEffect(() => {
+    const rootUrl = import.meta.env.VITE_API_ROOT;
+
+    const fetchPaths = async () => {
+      try {
+        const response = await axios.get(`${rootUrl}careerpaths/`);
+        setData(response.data);
+        setIsLoading(false);
+      } catch (error) {
+        setIsError(error);
+        setIsLoading(false);
+      }
+    };
+    fetchPaths();
+  });
+
+  if (isLoading) {
+    return (
+      <div className="wrapper">
+        <Loading />
+      </div>
+    );
+  }
+
+  if (isError) {
+    return (
+      <div className="wrapper">
+        <h4>Error Loading Blog posts</h4>
+      </div>
+    );
+  }
 
   return (
     <>
@@ -36,18 +75,22 @@ const CareerPath = () => {
           expert led programs
         </p>
         <div className="career-wrapper">
-          {careers.map((career, index) => (
-            <div key={index} className="career-card">
-              <img src={career.imgPath} alt="" />
-              <div className="children">
-                <h3>{career.title}</h3>
-                <p>{career.description}</p>
-                <a href="#">
-                  <button>Learn more</button>
-                </a>
+          {data.map((career) => {
+            const { id, image_display, career_name, description, slug } =
+              career;
+            return (
+              <div key={id} className="career-card">
+                <img src={image_display} alt="" />
+                <div className="children">
+                  <h3>{career_name}</h3>
+                  <p>{description}</p>
+                  <Link to={`/career-detail/${slug}`}>
+                    <button>Learn more</button>
+                  </Link>
+                </div>
               </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
       </section>
 
