@@ -2,21 +2,27 @@
   /* border: 1px solid green; */
   /* display: grid; */
   place-content: center;
+  /* height: 100%; */
   height: 80vh;
+  /* padding: 150px 0; */
   background: linear-gradient(
       to right,
       rgba(0, 34, 85, 0.8),
       rgba(40, 149, 226, 0.1)
     ),
-    var(--background-image) no-repeat center center fixed;;
+    var(--background-image) no-repeat center center fixed;
   background-size: cover; /* Adjusts to fit the container while preserving aspect ratio */
 }
 
 .course-detail__wrapper {
   width: 90%;
+  height: 90%;
   margin-inline: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   /* border: 1px solid red; */
-  padding: 6rem 0;
+  padding-top: 6rem;
 }
 .course_description {
   color: white;
@@ -36,7 +42,7 @@
   font-size: clamp(30px, 4.5vw, 65px);
 }
 .course_description p {
-  font-size: clamp(20px, 1vw, 45px);
+  font-size: clamp(15px, 1.2vw, 45px);
 }
 
 .course-detail-action-btns {
@@ -46,7 +52,7 @@
   width: 100%;
   margin: 1rem 0;
   display: grid;
-  grid-template-columns: 150px 150px 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
 }
 
 .language,
@@ -58,18 +64,23 @@
 
 .language img,
 .rating img {
-  width: 25%;
+  width: 12%;
   margin-right: 1rem;
+}
+
+.language h2,
+.rating h2 {
+  font-size: clamp(15px, 1vw, 45px);
 }
 
 .course-detail-action-btns .enroll-action-btn {
   place-self: end;
 }
 
-@media (max-width: 425px) {
+@media (max-width: 500px) {
   .language img,
   .rating img {
-    width: 15%;
+    width: 10%;
   }
   .language,
   .rating {
@@ -91,6 +102,8 @@
   padding: 1rem 2.5rem;
   font-family: "Poppins";
   border-radius: 0.3rem;
+  font-size: clamp(15px, 1vw, 45px);
+  white-space: nowrap;
 }
 
 @media (min-width: 1024px) {
@@ -204,4 +217,81 @@
   .get-started__wrapper {
     width: 60%;
   }
+}
+.action-get-started {
+  display: none;
+}
+
+.action-get-started.show {
+  display: block;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.7);
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 500;
+  transition: all 1s ease-in-out;
+}
+
+.get-started-form-class {
+  z-index: 500;
+  left: 50%;
+  top: -25%;
+  transform: translate(-50%, 50%);
+  position: fixed;
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: 5px;
+  width: 550px;
+  max-width: 85%;
+  margin-inline: auto;
+}
+
+.get-started-form-class .close-menu {
+  position: absolute;
+  top: 1rem;
+  right: 2rem;
+  cursor: pointer;
+  width: 5%;
+  height: 5%;
+  clip-path: circle();
+  background-color: rgb(221, 220, 220);
+  padding: 0.4rem;
+  display: flex;
+  align-items: center;
+}
+.get-started-form-class .close-menu img {
+  width: 100%;
+}
+.get-started-form-class form {
+  margin: 2rem 0;
+}
+.get-started-form-class form div {
+  margin: 1rem 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.get-started-form-class form div select,
+.get-started-form-class form div input,
+.get-started-form-class form div textarea {
+  font-family: "Poppins";
+  padding: 0.75rem;
+  border-radius: 4px;
+  flex: 1;
+  border: 1px solid gray;
+  outline: none;
+}
+
+.get-started-form-class button {
+  width: 100%;
+  border-radius: 3px;
+  border: none;
+  background-color: var(--body-font-color);
+  color: white;
+  padding: 1rem 0;
+  font-family: "Poppins";
+  font-weight: 500;
 }

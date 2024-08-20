@@ -38,6 +38,9 @@
     flex: 1 1 0;
   }
 }
+.blog-card .post-img{
+  /* width: 40%; */
+}
 
 .blog-card .post-img .blog-img {
   width: 100%;
@@ -72,6 +75,6 @@
 
 .blog-time-stamp img,
 .blog-author__details img {
-  width: 8%;
+  width: 5%;
   margin-right: 0.5rem;
 }

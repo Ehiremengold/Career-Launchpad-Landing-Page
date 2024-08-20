@@ -6,12 +6,20 @@ import rating from "/src/assets/career-detail-icons/rating.svg";
 import language from "/src/assets/career-detail-icons/language.svg";
 import Tab from "../../components/Tab/Tab.jsx";
 import Loading from "../../components/LoadingSpinner/Loading.jsx";
+import closeMenu from "../../assets/svg/menu-close.png";
+import ContactForm from "../../components/ContactForm/ContactForm.jsx";
 
 const CareerDetail = () => {
   const { slug } = useParams(); // Retrieve slug from URL
   const [careerDetail, setCareerDetail] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
   const [isError, setIsError] = useState(false);
+
+  const [modalState, setModalState] = useState(false);
+
+  const toggleModal = () => {
+    setModalState(!modalState);
+  };
 
   useEffect(() => {
     const rootUrl = import.meta.env.VITE_API_ROOT;
@@ -74,11 +82,17 @@ const CareerDetail = () => {
       </section>
 
       <Tab
+        toggleModal={toggleModal}
         whatYouWillLearn={careerDetail.what_you_will_learn_list}
         skills={careerDetail.skills_you_will_gain}
         potentialJobs={careerDetail.potential_jobs}
       />
-      <div className="overlay show"></div>
+      <ContactForm
+        careerDetailName={careerDetail.career_name}
+        modalState={modalState}
+        toggleModal={toggleModal}
+        closeMenu={closeMenu}
+      />
     </>
   );
 };

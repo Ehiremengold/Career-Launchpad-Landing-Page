@@ -20,14 +20,11 @@
   padding: 1rem 2.5rem;
   font-weight: 500;
   border-radius: 5px;
+  transition: transform 0.6s;
+  cursor: pointer;
 }
 
-.overlay.show {
-  position: fixed;
-  background-color: rgba(0, 0, 0, 0.1);
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  z-index: 5000;
+.ready-to-begin button:active {
+  transform: scale(0.8);
 }
+

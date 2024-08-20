@@ -34,9 +34,9 @@ const Hero = ({ heroText, heroSubtitle, heroBg }) => {
           <h1 id="title-1">{heroText}</h1>
           <p id="subtitle-1">{heroSubtitle}</p>
           <div className="hero__cta-btns" id="animate-btns">
-            <a href="#">
+            <Link to="explore-header" smooth={true} duration={500}>
               <button className="get-started">Get Started</button>
-            </a>
+            </Link>
             <Link to="cta__section" smooth={true} duration={500}>
               <button>Learn more</button>
             </Link>

@@ -7,19 +7,22 @@
   box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.1);
   min-height: 500px;
   /* width: 85vw; */
-  /* max-width: 950px; */
+  max-width: 950px;
 }
 @media (min-width: 900px) {
   .widget {
-    width: 60vw;
+    width: 75vw;
   }
 }
 
 .tabs {
+  width: 90%;
+  margin-inline: auto;
   display: flex;
   position: relative;
   justify-content: space-around;
   border-bottom: 1px solid #e9ebec;
+  flex-wrap: wrap;
 }
 
 .tab {
@@ -30,7 +33,7 @@
   font-weight: 600;
   cursor: pointer;
   transition: color 0.3s ease;
-  color: #dddddf;
+  color: #b2b2b6;
   z-index: 1; /* Ensure tabs are above the indicator */
 }
 
@@ -85,7 +88,7 @@
   margin-top: 3rem;
 }
 
-.tab-pane.testimonials h2{
+.tab-pane.testimonials h2 {
   font-size: clamp(16px, 1.5vw, 35px);
 }
 .tab-pane.fade-in {
@@ -103,7 +106,7 @@
   margin-top: 10px;
   overflow: hidden;
   transition: height 0.4s ease-in-out;
-  box-shadow: inset 0 2px 5px 0 rgba(96, 96, 96, 0.1);
+  box-shadow: inset 0 2px 5px 0 rgba(96, 96, 96, 0.3);
 }
 
 .what-you-learn.show {
@@ -157,10 +160,15 @@
     grid-template-columns: repeat(2, 1fr);
   }
 }
+/* .what-you-learn, */
 
 .item-container {
-  padding: 1rem;
+  padding: .8rem;
   border-radius: 6px;
   white-space: nowrap;
   background-color: rgba(96, 96, 96, 0.1);
+}
+
+.item-container p{
+  font-size: clamp(10px, 16px, 25px);
 }

@@ -1,4 +1,5 @@
 import axios from "axios";
+import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import morePaths from "../../../src/assets/icons/right-arrow.png";
 import Loading from "../LoadingSpinner/Loading";
@@ -55,12 +56,12 @@ const CareerPaths = ({ isHome }) => {
         </div>
         <div className="explore-paths__cards">
           {data.map((careerpath) => {
-            const { id, career_name, description } = careerpath;
+            const { id, career_name, description, slug } = careerpath;
             return (
               <div key={id} className="explore-path__card card">
                 <h3>{career_name}</h3>
-                <p>{truncateText(description, 151)}</p>
-                <a href="">Learn more</a>
+                <p>{truncateText(description, 100)}</p>
+                <Link to={`career-detail/${slug}`}>Learn more</Link>
               </div>
             );
           })}

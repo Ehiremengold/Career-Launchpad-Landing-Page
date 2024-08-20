@@ -6,7 +6,7 @@ import Alumni from "../Alumni/Alumni.jsx";
 import ReadyToBegin from "../ReadyToBegin/ReadyToBegin.jsx";
 import "./Tab.css";
 
-const Tab = ({whatYouWillLearn, skills, potentialJobs}) => {
+const Tab = ({whatYouWillLearn, skills, potentialJobs, toggleModal}) => {
   const [activeTab, setActiveTab] = useState("about");
   const [visible, setVisible] = useState(false);
 
@@ -87,7 +87,7 @@ const Tab = ({whatYouWillLearn, skills, potentialJobs}) => {
                 );
               })}
             </div>
-            <ReadyToBegin />
+            <ReadyToBegin toggleModal={toggleModal}/>
             <WhyChooseStackwisr />
           </div>
         )}

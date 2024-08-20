@@ -1,11 +1,7 @@
 import "./ReadyToBegin.css";
 
-const showModal = () => {
-  console.log('show modal');
-  
-}
 
-const ReadyToBegin = () => {
+const ReadyToBegin = ({toggleModal}) => {
   return (
     <div className="ready-to-begin">
       <h1>Ready to Begin?</h1>
@@ -13,7 +9,7 @@ const ReadyToBegin = () => {
         Click on &#34;Get Started&#34; to fill out the form, and one of our
         career experts will contact you shortly.
       </p>
-      <button onClick={showModal}>Get Started</button>
+      <button onClick={toggleModal}>Get Started</button>
     </div>
   );
 };

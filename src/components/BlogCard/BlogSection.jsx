@@ -19,6 +19,7 @@ const BlogCards = () => {
     const fetchPosts = async () => {
       try {
         const response = await axios.get(`${rootUrl}blog/latest-posts/`);
+        console.log(response.data);
         setData(response.data);
         setIsLoading(false);
       } catch (error) {
@@ -50,7 +51,7 @@ const BlogCards = () => {
       <h1>Resources</h1>
       <div className="blog__content" id="blog">
         {data.map((post) => {
-          const { id, image, author, title, created } = post;
+          const { id, image, author, title, created, slug } = post;
           return (
             <BlogCard
               key={id}
@@ -58,6 +59,7 @@ const BlogCards = () => {
               author={author}
               date={created}
               image={image}
+              slug={slug}
             />
           );
         })}
