@@ -1,10 +1,11 @@
 .loading-spinner {
-  width: 35px;
-  height: 35px;
+  width: 100px;
+  height: 100px;
   border-radius: 50%;
   border: 5px solid rgba(233, 233, 233);
   border-top: 5px solid black;
   animation: spin 1s linear infinite;
+  margin: 5rem 0;
 }
 
 @keyframes spin {

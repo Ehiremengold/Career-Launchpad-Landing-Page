@@ -1,16 +1,36 @@
-import { useRef } from "react";
-import blogHero from "/src/assets/blog/blog-hero.jpg";
+import { useRef, useEffect } from "react";
+// import blogHero from "/src/assets/blog/blog-hero.jpg";
 import arrowDown from "/src/assets/svg/arrow_down_white.svg";
 import dateIcon from "/src/assets/blog/date.png";
 import userIcon from "/src/assets/blog/user.png";
 import "./Blog.css";
+import { useDispatch, useSelector } from "react-redux";
+import { getBlogPosts } from "../../features/blog/blogSlice";
+import Loading from "../../components/LoadingSpinner/Loading";
+import { truncateString } from "../../utils";
 
 const Blog = () => {
   const blogPosts = useRef(null);
+  const { posts, isLoading, isError } = useSelector((store) => store.blog);
+
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    console.log('DISPATCH from blog');
+    dispatch(getBlogPosts());
+  }, [dispatch]);
 
   const scrollToSection = () => {
     blogPosts.current.scrollIntoView({ behavior: "smooth" });
   };
+
+  if (isLoading) {
+    return <Loading />;
+  }
+  if (isError) {
+    return <div className="error-msg">Error fetching posts</div>;
+  }
+
   return (
     <>
       <div className="hero-scroll">
@@ -35,16 +55,13 @@ const Blog = () => {
           <div className="latest-post-card">
             {/*  */}
             <div className="post-img">
-              <img src={blogHero} alt="" />
+              <img src={posts[0].image} alt="" />
             </div>
             {/*  */}
             <div className="post-details">
-              <h2>Top 10 Tech Skills to Learn in 2024 to Earn 6 Figures</h2>
-              <p>
-                Discover the top 15 tech skills to learn in 2024 that can help
-                you earn a six-figure salary...
-              </p>
-              <a href="#">
+              <h2>{posts[0].title}</h2>
+              <p>{truncateString(posts[0].title)}</p>
+              <a href={`/blog/${posts[0].slug}/`}>
                 <p className="post-link">Read more</p>
               </a>
             </div>
@@ -53,65 +70,40 @@ const Blog = () => {
             <div className="post-details__author-date">
               <div className="post-details__date">
                 <img src={dateIcon} alt="" />
-                <p className="post-timestamp">21, July 2024</p>
+                <p className="post-timestamp">{posts[0].created}</p>
               </div>
               <div className="post-details__author">
                 <img src={userIcon} alt="" />
-                <p className="post-author">Agbo blessing</p>
+                <p className="post-author">{posts[0].author}</p>
               </div>
             </div>
             {/*  */}
           </div>
-          <div className="latest-posts-section">
-            <div className="latest-posts-card">
-              <img src={blogHero} alt="" />
-              <div className="post-title-details">
-                <h3>Data Analysis: Top 5 tools</h3>
-                <div className="latest-post__details">
-                  <div className="latest-post-details__date">
-                    <img src={dateIcon} alt="" />
-                    <p className="post-timestamp">21, July 2024</p>
-                  </div>
-                  <div className="latest-post-details__author">
-                    <img src={userIcon} alt="" />
-                    <p className="post-author">Agbo blessing</p>
-                  </div>
-                </div>
-              </div>
-            </div>
 
-            <div className="latest-posts-card">
-              <img src={blogHero} alt="" />
-              <div className="post-title-details">
-                <h3>Data Analysis: Top 5 tools</h3>
-                <div className="latest-post__details">
-                  <div className="latest-post-details__date">
-                    <img src={dateIcon} alt="" />
-                    <p className="post-timestamp">21, July 2024</p>
+          <div className="latest-posts-section">
+            {posts.slice(1).map((post) => {
+              const { id, image, title, slug, author, created } = post;
+              return (
+                <a href={`blog/${slug}/`} key={id}>
+                  <div className="latest-posts-card">
+                    <img src={image} alt="" />
+                    <div className="post-title-details">
+                      <h3>{truncateString(title)}</h3>
+                      <div className="latest-post__details">
+                        <div className="latest-post-details__date">
+                          <img src={dateIcon} alt="" />
+                          <p className="post-timestamp">{created}</p>
+                        </div>
+                        <div className="latest-post-details__author">
+                          <img src={userIcon} alt="" />
+                          <p className="post-author">{author}</p>
+                        </div>
+                      </div>
+                    </div>
                   </div>
-                  <div className="latest-post-details__author">
-                    <img src={userIcon} alt="" />
-                    <p className="post-author">Agbo blessing</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="latest-posts-card">
-              <img src={blogHero} alt="" />
-              <div className="post-title-details">
-                <h3>Data Analysis: Top 5 tools</h3>
-                <div className="latest-post__details">
-                  <div className="latest-post-details__date">
-                    <img src={dateIcon} alt="" />
-                    <p className="post-timestamp">21, July 2024</p>
-                  </div>
-                  <div className="latest-post-details__author">
-                    <img src={userIcon} alt="" />
-                    <p className="post-author">Agbo blessing</p>
-                  </div>
-                </div>
-              </div>
-            </div>
+                </a>
+              );
+            })}
           </div>
         </div>
       </section>

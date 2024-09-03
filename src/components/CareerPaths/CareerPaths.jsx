@@ -1,39 +1,28 @@
-import axios from "axios";
 import { Link } from "react-router-dom";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import morePaths from "../../../src/assets/icons/right-arrow.png";
 import Loading from "../LoadingSpinner/Loading";
 import { truncateText } from "../../../utils.js";
+import { useDispatch, useSelector } from "react-redux";
+import { getCareerPaths } from "../../features/careerpaths/careerpathsSlice.js";
 
-const CareerPaths = ({ isHome }) => {
-  const [isLoading, setIsLoading] = useState(true);
-  const [isError, setIsError] = useState(false);
+const CareerPaths = () => {
+  const { isLoading, isError, careerpaths } = useSelector(
+    (store) => store.careerpath
+  );
 
-  const [data, setData] = useState(null);
+  const dispatch = useDispatch();
 
   useEffect(() => {
-    const rootUrl = import.meta.env.VITE_API_ROOT;
-
-    const fetchPaths = async () => {
-      try {
-        const response = await axios.get(`${rootUrl}careerpaths/`);
-        setData(response.data);
-        setIsLoading(false);
-        console.log(data);
-      } catch (error) {
-        setIsError(true);
-        setIsLoading(false);
-        console.log(error);
-      }
-    };
-    fetchPaths();
+    dispatch(getCareerPaths());
   }, []);
 
   if (isLoading) {
-    <div className="wrapper">
-      <Loading />
-    </div>;
-    return;
+    return (
+      <div className="wrapper">
+        <Loading />
+      </div>
+    );
   }
 
   if (isError) {
@@ -55,7 +44,7 @@ const CareerPaths = ({ isHome }) => {
           </p>
         </div>
         <div className="explore-paths__cards">
-          {data.map((careerpath) => {
+          {careerpaths.map((careerpath) => {
             const { id, career_name, description, slug } = careerpath;
             return (
               <div key={id} className="explore-path__card card">

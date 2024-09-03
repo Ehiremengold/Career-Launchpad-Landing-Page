@@ -7,12 +7,11 @@ import WhyChooseStackwisr from "../../components/WhyChooseStackwisr/WhyChooseSta
 import axios from "axios";
 import Loading from "../../components/LoadingSpinner/Loading.jsx";
 import { Link } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
 
 const CareerPath = () => {
-  const [isLoading, setIsLoading] = useState(true);
-  const [isError, setIsError] = useState(false);
-
-  const [data, setData] = useState(null);
+  const dispatch = useDispatch()
+  const {isLoading, isError, careerpaths} = useSelector((store) => store.careerpath)
 
   const careerPathRef = useRef(null);
 
@@ -21,19 +20,7 @@ const CareerPath = () => {
   };
 
   useEffect(() => {
-    const rootUrl = import.meta.env.VITE_API_ROOT;
-
-    const fetchPaths = async () => {
-      try {
-        const response = await axios.get(`${rootUrl}careerpaths/`);
-        setData(response.data);
-        setIsLoading(false);
-      } catch (error) {
-        setIsError(error);
-        setIsLoading(false);
-      }
-    };
-    fetchPaths();
+    ;
   });
 
   if (isLoading) {

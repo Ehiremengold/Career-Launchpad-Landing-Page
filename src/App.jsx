@@ -10,8 +10,6 @@ import Blog from "./pages/Blog/Blog.jsx";
 import BlogDetail from "./pages/Blog/BlogDetail.jsx";
 
 function App() {
- 
-
   return (
     <Router>
       <Base>

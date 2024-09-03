@@ -226,3 +226,8 @@
     box-shadow: inset 2px 2px 5px rgba(96, 96, 96, 0.3);
   }
 }
+
+.error-msg {
+  margin: 5rem 0;
+  margin-inline: auto;
+}
