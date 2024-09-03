@@ -3,8 +3,6 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import BlogCard from "./BlogCard";
 import "./BlogSection.css";
-import { blogPosts } from "./blogutils";
-import { truncateText } from "../../../utils.js";
 import Loading from "../LoadingSpinner/Loading.jsx";
 
 const BlogCards = () => {
@@ -18,7 +16,7 @@ const BlogCards = () => {
 
     const fetchPosts = async () => {
       try {
-        const response = await axios.get(`${rootUrl}blog/latest-posts/`);
+        const response = await axios.get(`${rootUrl}/api/blog/latest-posts/`);
         console.log(response.data);
         setData(response.data);
         setIsLoading(false);
@@ -51,17 +49,8 @@ const BlogCards = () => {
       <h1>Resources</h1>
       <div className="blog__content" id="blog">
         {data.map((post) => {
-          const { id, image, author, title, created, slug } = post;
-          return (
-            <BlogCard
-              key={id}
-              title={title}
-              author={author}
-              date={created}
-              image={image}
-              slug={slug}
-            />
-          );
+          const { id } = post;
+          return <BlogCard key={id} {...post} />;
         })}
       </div>
     </section>

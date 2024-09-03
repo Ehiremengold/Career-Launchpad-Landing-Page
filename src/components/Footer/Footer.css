@@ -6,7 +6,7 @@ footer {
 }
 
 .upper-footer {
-  width: 80%;
+  width: 90%;
   margin-inline: auto;
   margin-bottom: 50px;
   /* border: 1px solid green; */
@@ -173,4 +173,5 @@ span {
   padding: 0.8rem 2.5rem;
   display: block;
   font-family: 'Poppins';
+  white-space: nowrap;
 }

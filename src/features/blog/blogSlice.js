@@ -10,7 +10,7 @@ const initialState = {
   isError: false,
 };
 
-export const getBlogPostDetail = createAsyncThunk(
+const getBlogPostDetail = createAsyncThunk(
   "blog/getBlogPostDetail",
   async (postSlug, thunkAPI) => {
     try {
@@ -22,17 +22,22 @@ export const getBlogPostDetail = createAsyncThunk(
   }
 );
 
-export const getBlogPosts = createAsyncThunk(
+const getBlogPosts = createAsyncThunk(
   "blog/getBlogPosts",
   async (_, thunkAPI) => {
     try {
+      console.log("fetching blog posts...");
+      
       const response = await axios(`${ROOT_URL}/api/blog/posts/`);
+      console.log(response.data);
+      
       return response.data;
     } catch (error) {
       return thunkAPI.rejectWithValue(error);
     }
   }
 );
+
 
 const blogSlice = createSlice({
   name: "blog",
@@ -64,5 +69,7 @@ const blogSlice = createSlice({
       });
   },
 });
+
+export {getBlogPosts, getBlogPostDetail}
 
 export default blogSlice.reducer;
