@@ -32,8 +32,8 @@
   position: absolute;
   background: linear-gradient(
     to right,
-    rgba(0, 34, 85, 0.8),
-    rgba(40, 149, 226, 0.1)
+    rgba(0, 34, 85, 0.9),
+    rgba(40, 149, 226, 0.3)
   );
   left: 0;
   right: 0;
