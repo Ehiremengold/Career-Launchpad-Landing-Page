@@ -83,6 +83,7 @@
   background-color: #fff;
   box-shadow: 2px 3px 5px rgba(96, 96, 96, 0.3);
   padding: 1rem;
+  width: 100%;
 }
 
 .latest-post-card .post-details h2,
@@ -140,6 +141,26 @@
 }
 .latest-posts-section {
   /* border: 1px solid green; */
+  position: relative;
+}
+
+.see-more-btn {
+  position: absolute;
+  font-family: "Poppins";
+  left: 50%;
+  transform: translate(-50%, 50%);
+  bottom: 0;
+  padding: 0.6rem 1.5rem;
+  background-color: var(--body-font-color);
+  border: none;
+  color: #fff;
+  border-radius: 25px;
+}
+
+@media (min-width: 1024px) {
+  .see-more-btn {
+    bottom: 30px;
+  }
 }
 
 .latest-posts-card {
@@ -147,9 +168,15 @@
   box-shadow: 2px 3px 5px rgba(96, 96, 96, 0.3);
   background-color: #fff;
   display: flex;
-  margin-bottom: 1.25rem;
+  margin-bottom: 1rem;
   padding: 1rem;
   /* align-items: center; */
+}
+
+@media (max-width:425px) {
+  .latest-posts-card{
+    margin-bottom: 3rem;
+  }
 }
 .latest-posts-card img {
   width: 170px;

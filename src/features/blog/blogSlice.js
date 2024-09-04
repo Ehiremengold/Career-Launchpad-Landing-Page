@@ -2,12 +2,13 @@ import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import axios from "axios";
 import { ROOT_URL } from "../../utils";
 
-
 const initialState = {
   posts: [],
   post: [],
+  more: false,
   isLoading: false,
   isError: false,
+  page: 1,
 };
 
 const getBlogPostDetail = createAsyncThunk(
@@ -17,32 +18,33 @@ const getBlogPostDetail = createAsyncThunk(
       const response = await axios(`${ROOT_URL}/api/blog/post/${postSlug}/`);
       return response.data;
     } catch (error) {
-      return thunkAPI.rejectWithValue(error);
+      return thunkAPI.rejectWithValue(error.response.data);
     }
   }
 );
 
 const getBlogPosts = createAsyncThunk(
   "blog/getBlogPosts",
-  async (_, thunkAPI) => {
+  async (page = 1, thunkAPI) => {
     try {
-      console.log("fetching blog posts...");
-      
-      const response = await axios(`${ROOT_URL}/api/blog/posts/`);
-      console.log(response.data);
-      
+      const response = await axios(`${ROOT_URL}/api/blog/posts/`, {
+        params: { page },
+      });
       return response.data;
     } catch (error) {
-      return thunkAPI.rejectWithValue(error);
+      return thunkAPI.rejectWithValue(error.response.data);
     }
   }
 );
 
-
 const blogSlice = createSlice({
   name: "blog",
   initialState,
-  reducers: {},
+  reducers: {
+    incrementPage: (state) => {
+      state.page += 1;
+    },
+  },
   extraReducers: (builder) => {
     builder
       .addCase(getBlogPosts.pending, (state) => {
@@ -50,7 +52,8 @@ const blogSlice = createSlice({
       })
       .addCase(getBlogPosts.fulfilled, (state, action) => {
         state.isLoading = false;
-        state.posts = action.payload;
+        state.posts = [...state.posts, ...action.payload.results];
+        action.payload.next ? (state.more = true) : (state.more = false);
       })
       .addCase(getBlogPosts.rejected, (state) => {
         state.isLoading = false;
@@ -70,6 +73,8 @@ const blogSlice = createSlice({
   },
 });
 
-export {getBlogPosts, getBlogPostDetail}
+export { getBlogPosts, getBlogPostDetail };
+
+export const { incrementPage } = blogSlice.actions;
 
 export default blogSlice.reducer;
