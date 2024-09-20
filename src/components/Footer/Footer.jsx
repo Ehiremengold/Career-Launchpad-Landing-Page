@@ -64,7 +64,9 @@ const Footer = () => {
               Book a consultation today to speak with one of our career experts
               and get started
             </span>
-            <button className="book-call-btn">Book Call</button>
+            <a href="https://calendly.com/stackwisr/request-a-call-with-us" target="_blank">
+              <button className="book-call-btn">Book Call</button>
+            </a>
           </div>
         </div>
       </div>

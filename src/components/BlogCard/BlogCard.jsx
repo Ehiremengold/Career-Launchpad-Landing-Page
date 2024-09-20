@@ -11,7 +11,10 @@ const BlogCard = ({ title, author, date, image, slug }) => {
         <img src={image} className="blog-img" alt="" />
       </div>
       <div className="blog-details__section">
-        <Link to={`blog/${slug}/`}><h6>{title}</h6></Link>
+        {/* <Link to={`blog/${slug}/`}><h6>{title}</h6></Link> */}
+        <Link to={`blog/detail/`}>
+          <h6>{title}</h6>
+        </Link>
         <div className="blog-author__details">
           <img src={userIcon} alt="" />
           <p>{author}</p>

@@ -154,11 +154,9 @@ const About = () => {
           <div className="git-container">
             <img src={images.phone} alt="" />
             <h4>Talk to support</h4>
-            <a href="tel:+2348009078235">
-              <p>NG: 08009078235</p>
-            </a>
-            <a href="tel: 02038180993">
-              <p>UK: 02038180993</p>
+
+            <a href="tel:03337720285">
+              <p>UK: 0333-772-0285</p>
             </a>
           </div>
           <div className="git-container">
@@ -178,7 +176,12 @@ const About = () => {
         <div className="git__cta">
           <h2>Any Questions?</h2>
           <p>Click the button below and we will get back to you</p>
-          <button className="git__cta-btn">Contact us</button>
+          <a
+            target="_blank"
+            href="https://calendly.com/stackwisr/request-a-call-with-us"
+          >
+            <button className="git__cta-btn">Contact us</button>
+          </a>
         </div>
       </section>
     </>

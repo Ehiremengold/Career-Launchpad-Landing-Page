@@ -4,16 +4,17 @@ import arrowDown from "/src/assets/svg/arrow_down_white.svg";
 import "./CareerPath.css";
 import { useRef, useEffect } from "react";
 import WhyChooseStackwisr from "../../components/WhyChooseStackwisr/WhyChooseStackwisr.jsx";
-import Loading from "../../components/LoadingSpinner/Loading.jsx";
+// import Loading from "../../components/LoadingSpinner/Loading.jsx";
 import { Link } from "react-router-dom";
-import { useDispatch, useSelector } from "react-redux";
-import { getCareerPaths } from "../../features/careerpaths/careerpathsSlice.js";
+// import { useDispatch, useSelector } from "react-redux";
+// import { getCareerPaths } from "../../features/careerpaths/careerpathsSlice.js";
+import { careers } from "./careers.js";
 
 const CareerPath = () => {
-  const dispatch = useDispatch();
-  const { isLoading, isError, careerpaths } = useSelector(
-    (store) => store.careerpath
-  );
+  // const dispatch = useDispatch();
+  // const { isLoading, isError, careerpaths } = useSelector(
+  //   (store) => store.careerpath
+  // );
 
   const careerPathRef = useRef(null);
 
@@ -21,25 +22,25 @@ const CareerPath = () => {
     careerPathRef.current.scrollIntoView({ behavior: "smooth" });
   };
 
-  useEffect(() => {
-    dispatch(getCareerPaths());
-  }, [dispatch]);
+  // useEffect(() => {
+  //   dispatch(getCareerPaths());
+  // }, [dispatch]);
 
-  if (isLoading) {
-    return (
-      <div className="wrapper">
-        <Loading />
-      </div>
-    );
-  }
+  // if (isLoading) {
+  //   return (
+  //     <div className="wrapper">
+  //       <Loading />
+  //     </div>
+  //   );
+  // }
 
-  if (isError) {
-    return (
-      <div className="wrapper">
-        <h4>Error Loading Blog posts</h4>
-      </div>
-    );
-  }
+  // if (isError) {
+  //   return (
+  //     <div className="wrapper">
+  //       <h4>Error Loading Blog posts</h4>
+  //     </div>
+  //   );
+  // }
 
   return (
     <>
@@ -65,7 +66,7 @@ const CareerPath = () => {
           expert led programs
         </p>
         <div className="career-wrapper">
-          {careerpaths.map((career) => {
+          {/* {careerpaths.map((career) => {
             const { id, image_display, career_name, description, slug } =
               career;
             return (
@@ -80,15 +81,33 @@ const CareerPath = () => {
                 </div>
               </div>
             );
+          })} */}
+          {careers.map((career) => {
+            const { id, imgPath, career_name, description, slug } = career;
+            return (
+              <div key={id} className="career-card">
+                <img src={imgPath} alt="" />
+                <div className="children">
+                  <h3>{career_name}</h3>
+                  <p>{description}</p>
+                  {/* <Link to={`/career-detail/${slug}`}>
+                    <button>Learn more</button>
+                  </Link> */}
+                  <Link to={`/career-detail/slug/`}>
+                    <button>Learn more</button>
+                  </Link>
+                </div>
+              </div>
+            );
           })}
         </div>
       </section>
 
       <WhyChooseStackwisr />
 
-      <section className="keyword-search">
+      {/* <section className="keyword-search">
         <input type="text" placeholder="Search Courses" />
-      </section>
+      </section> */}
     </>
   );
 };

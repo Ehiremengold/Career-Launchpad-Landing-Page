@@ -46,7 +46,10 @@ const CTASection = () => {
             </select>
             <input type="text" placeholder="Phone" />
           </form>
-          <a href="tel:+2348009078235">
+          <a
+            href="https://calendly.com/stackwisr/request-a-call-with-us"
+            target="_blank"
+          >
             <div className="cta-btn">BOOK A CALL</div>
           </a>
         </div>
