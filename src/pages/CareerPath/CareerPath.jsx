@@ -2,16 +2,18 @@ import Hero from "../../components/Hero/Hero";
 import heroBg from "../../../src/assets/hero-video/hero-career.jpg";
 import arrowDown from "/src/assets/svg/arrow_down_white.svg";
 import "./CareerPath.css";
-import { useRef, useEffect, useState } from "react";
+import { useRef, useEffect } from "react";
 import WhyChooseStackwisr from "../../components/WhyChooseStackwisr/WhyChooseStackwisr.jsx";
-import axios from "axios";
 import Loading from "../../components/LoadingSpinner/Loading.jsx";
 import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
+import { getCareerPaths } from "../../features/careerpaths/careerpathsSlice.js";
 
 const CareerPath = () => {
-  const dispatch = useDispatch()
-  const {isLoading, isError, careerpaths} = useSelector((store) => store.careerpath)
+  const dispatch = useDispatch();
+  const { isLoading, isError, careerpaths } = useSelector(
+    (store) => store.careerpath
+  );
 
   const careerPathRef = useRef(null);
 
@@ -20,8 +22,8 @@ const CareerPath = () => {
   };
 
   useEffect(() => {
-    ;
-  });
+    dispatch(getCareerPaths());
+  }, [dispatch]);
 
   if (isLoading) {
     return (
@@ -48,6 +50,7 @@ const CareerPath = () => {
           heroSubtitle={
             "Our flexible programs are designed to fit your work schedule and provide you with the skills needed to excel in today's job market."
           }
+          isHome={false}
         />
         <div className="scroll-down" onClick={scrollToSection}>
           <p>SCROLL DOWN</p>
@@ -62,7 +65,7 @@ const CareerPath = () => {
           expert led programs
         </p>
         <div className="career-wrapper">
-          {data.map((career) => {
+          {careerpaths.map((career) => {
             const { id, image_display, career_name, description, slug } =
               career;
             return (

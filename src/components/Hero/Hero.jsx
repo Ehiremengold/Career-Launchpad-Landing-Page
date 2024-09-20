@@ -4,7 +4,7 @@ import gsap from "gsap";
 import { Link } from "react-scroll";
 import videoFile from "../../assets/hero-video/hero.mp4";
 
-const Hero = ({ heroText, heroSubtitle, heroBg }) => {
+const Hero = ({ heroText, heroSubtitle, heroBg, isHome }) => {
   const sectionRef = useRef(null);
 
   useLayoutEffect(() => {
@@ -25,11 +25,13 @@ const Hero = ({ heroText, heroSubtitle, heroBg }) => {
 
   return (
     <section className="hero-container" ref={sectionRef}>
-      <video className="hero-bg-img" autoPlay loop muted>
-        <source src={videoFile} type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
-      {/* <img className="hero-bg-img" src={heroBg} alt="" /> */}
+      {isHome && (
+        <video className="hero-bg-img" autoPlay loop muted>
+          <source src={videoFile} type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      )}
+      {!isHome && <img className="hero-bg-img" src={heroBg} alt="" />}
       <div className="hero___content-container">
         <div className="hero__content">
           <h1 id="title-1">{heroText}</h1>

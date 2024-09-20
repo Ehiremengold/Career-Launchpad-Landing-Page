@@ -38,6 +38,7 @@ const Home = () => {
         heroSubtitle={
           " Future-proof your career with our AI-driven training and career development"
         }
+        isHome={true}
       />
       <CareerPaths isHome={true} />
 

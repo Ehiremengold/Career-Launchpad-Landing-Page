@@ -26,7 +26,7 @@ const CareerDetail = () => {
 
     const fetchCareerDetail = async () => {
       try {
-        const response = await axios.get(`${rootUrl}careerpaths/${slug}/`);
+        const response = await axios.get(`${rootUrl}/api/careerpaths/${slug}/`);
         setCareerDetail(response.data);
         setIsLoading(false);
       } catch (error) {

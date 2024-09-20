@@ -88,7 +88,6 @@ const Tab = ({whatYouWillLearn, skills, potentialJobs, toggleModal}) => {
               })}
             </div>
             <ReadyToBegin toggleModal={toggleModal}/>
-            <WhyChooseStackwisr />
           </div>
         )}
         {activeTab === "syllabus" && (
