@@ -1,12 +1,12 @@
-import { useSelector } from "react-redux";
+// import { useSelector } from "react-redux";
 import dateIcon from "/src/assets/blog/date.png";
 import userIcon from "/src/assets/blog/user.png";
-import Loading from "../LoadingSpinner/Loading";
+// import Loading from "../LoadingSpinner/Loading";
 import { truncateString } from "../../utils";
-import { memo, useEffect } from "react";
-import { useDispatch } from "react-redux";
-import { getBlogPosts, incrementPage } from "../../features/blog/blogSlice";
-import { Link } from "react-router-dom";
+import { memo} from "react";
+// import { useDispatch } from "react-redux";
+// import { getBlogPosts, incrementPage } from "../../features/blog/blogSlice";
+// import { Link } from "react-router-dom";
 import { blogPosts } from "../BlogCard/blogutils";
 
 const BlogPosts = ({ blogPostsRef }) => {
@@ -119,7 +119,7 @@ const BlogPosts = ({ blogPostsRef }) => {
             );
           })} */}
           {blogPosts.slice(1).map((post) => {
-            const { id, image, title, slug, author, created } = post;
+            const { id, image, title, author, created } = post;
             return (
               <div className="latest-posts-card" key={id}>
                 <img src={image} alt="" />
