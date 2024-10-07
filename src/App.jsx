@@ -7,7 +7,7 @@ import CareerPath from "./pages/CareerPath/CareerPath.jsx";
 import WildCard from "./WildCard.jsx";
 import CareerDetail from "./pages/CareerPath/CareerDetail.jsx";
 import Blog from "./pages/Blog/Blog.jsx";
-import BlogDetail from "./pages/Blog/BlogDetail.jsx";
+import BlogDetail from "./pages/BlogDetail/BlogDetail.jsx";
 
 function App() {
   return (
@@ -16,12 +16,12 @@ function App() {
         <Routes>
           <Route exact path="/" element={<Home />} />
           <Route path="/about-us" element={<About />} />
-          {/* <Route path="/career-detail/:slug/" element={<CareerDetail />} /> */}
+          <Route path="/career-detail/:slug/" element={<CareerDetail />} />
           <Route path="/career-detail/:slug/" element={<WildCard />} />
           <Route path="/explore-paths" element={<CareerPath />} />
           <Route path="/blog" element={<Blog />} />
-          {/* <Route path="/blog/:slug/" element={<BlogDetail />} /> */}
-          <Route path="/blog/:slug/" element={<WildCard />} />
+          <Route path="/blog/:slug" element={<BlogDetail />} />
+          {/* <Route path="/blog/:slug/" element={<WildCard />} /> */}
           <Route path="*" element={<WildCard />} />
         </Routes>
       </Base>
