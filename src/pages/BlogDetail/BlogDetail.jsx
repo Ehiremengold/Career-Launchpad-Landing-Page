@@ -6,6 +6,7 @@ import LoadingSpinner from "../../components/LoadingSpinner/Loading";
 import DOMPurify from "dompurify";
 import { getBlogPostDetail } from "../../features/blog/blogSlice";
 import { ROOT_URL } from "../../utils";
+import { Helmet } from "react-helmet-async";
 
 const BlogDetail = () => {
   const param = useParams();
@@ -16,7 +17,6 @@ const BlogDetail = () => {
   }, [dispatch, param.slug]);
 
   const { isLoading, isError, post } = useSelector((state) => state.blog);
-
 
   if (!post || isLoading) {
     return (
@@ -34,10 +34,17 @@ const BlogDetail = () => {
     );
   }
 
-  const { title, image, created, body, author } = post || {};
+  const { title, image, created, body, author, meta_description } = post || {};
 
   return (
     <>
+      <Helmet>
+        <title>{title}</title>
+        <meta
+          name="description"
+          content={meta_description} // Set description
+        />
+      </Helmet>
       <section
         className="detail"
         style={{ backgroundImage: `url(${ROOT_URL + image})` }}
@@ -62,13 +69,13 @@ const BlogDetail = () => {
             />
           </div>
           <div className="right__main-body">
-            <h1>Related Posts</h1>
+            {/* <h1>Related Posts</h1> */}
             <div className="related-posts">
               {/* {[1, 2, 3.map((post, index) => {
                 return <RelatedPost key={index} />;
               })} */}
             </div>
-            <h1>Category</h1>
+            {/* <h1>Category</h1> */}
             {/* <button className="category-btn">{category}</button> */}
           </div>
         </div>
