@@ -8,7 +8,7 @@ import Tab from "../../components/Tab/Tab.jsx";
 import Loading from "../../components/LoadingSpinner/Loading.jsx";
 import closeMenu from "../../assets/svg/menu-close.png";
 import ContactForm from "../../components/ContactForm/ContactForm.jsx";
-import  {Helmet} from "react-helmet-async";
+import  {Helmet} from "react-helmet";
 
 const CareerDetail = () => {
   const { slug } = useParams(); // Retrieve slug from URL

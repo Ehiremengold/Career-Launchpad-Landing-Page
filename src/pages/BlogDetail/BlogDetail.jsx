@@ -6,7 +6,7 @@ import LoadingSpinner from "../../components/LoadingSpinner/Loading";
 import DOMPurify from "dompurify";
 import { getBlogPostDetail } from "../../features/blog/blogSlice";
 import { ROOT_URL } from "../../utils";
-import { Helmet } from "react-helmet-async";
+import { Helmet } from "react-helmet";
 
 const BlogDetail = () => {
   const param = useParams();
