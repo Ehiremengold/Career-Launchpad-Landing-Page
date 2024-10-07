@@ -44,7 +44,7 @@ const CareerPaths = () => {
           </p>
         </div>
         <div className="explore-paths__cards">
-          {careerpaths.map((careerpath) => {
+          {careerpaths.slice(0,4).map((careerpath) => {
             const { id, career_name, description, slug } = careerpath;
             return (
               <div key={id} className="explore-path__card card">
