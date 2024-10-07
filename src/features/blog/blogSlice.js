@@ -16,6 +16,8 @@ const getBlogPostDetail = createAsyncThunk(
   async (postSlug, thunkAPI) => {
     try {
       const response = await axios(`${ROOT_URL}/api/blog/post/${postSlug}/`);
+      console.log(response.data);
+      
       return response.data;
     } catch (error) {
       return thunkAPI.rejectWithValue(error.response.data);
